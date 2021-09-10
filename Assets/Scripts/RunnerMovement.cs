@@ -30,6 +30,11 @@ public class RunnerMovement : MonoBehaviour
         if (!spawn.onSpawn)
         {
             if (!alive) return;
+            if (GroundTile.complete)
+            {
+                SceneManager.LoadScene(0);
+                return;
+            }
             anim1.SetBool("atSpawn", false);
 
             //turnLeft = Input.GetKeyDown(KeyCode.A);
@@ -54,6 +59,7 @@ public class RunnerMovement : MonoBehaviour
     }
     public void Die() {
         alive = false;
+        GroundTile.count = 0;
         //restarts game
         SceneManager.LoadScene(0);
         //SceneManager.GetActiveScene().name

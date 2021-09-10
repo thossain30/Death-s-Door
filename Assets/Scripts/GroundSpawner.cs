@@ -5,7 +5,6 @@ using UnityEngine;
 public class GroundSpawner : MonoBehaviour
 {
     public GameObject groundTile;
-    public static bool complete = false;
     Vector3 nextSpawnPoint;
     //number of tiles to spawn ahead of player
     private int length = 10;

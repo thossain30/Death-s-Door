@@ -6,11 +6,18 @@ public class GroundTile : MonoBehaviour
 {
     public static int count = 0;
     GroundSpawner ground;
+    public static bool complete = false;
     public GameObject obstaclePrefab;
     // Start is called before the first frame update
     private void Start()
     {
         ground = GameObject.FindObjectOfType<GroundSpawner>();
+    }
+    private void Update()
+    {
+        if (count == 20) {
+            complete = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)

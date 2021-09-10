@@ -7,25 +7,31 @@ public class DoorScript : MonoBehaviour
 {
     public Scene scene;
     public GameObject text;
+    public GameObject compText;
     [SerializeField]
     public GameObject DoorLight;
+    Light rad;
     public bool nextToDoor = false;
     // Start is called before the first frame update
     void Start()
     {
-        Light light = DoorLight.GetComponent<Light>();
+        rad = DoorLight.GetComponent<Light>();
         text.SetActive(false);
-        light.enabled = false;
+        compText.SetActive(false);
+        rad.enabled = false;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && nextToDoor)
+        if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !GroundTile.complete)
         {
             if (scene == null)
             {
                 scene = SceneManager.GetActiveScene();
             }
             SceneManager.LoadScene(1);
+        }
+        if (GroundTile.complete) {
+            rad.enabled = true;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -34,6 +40,10 @@ public class DoorScript : MonoBehaviour
         {
             text.SetActive(true);
             nextToDoor = true;
+            if (GroundTile.complete) {
+                compText.SetActive(true);
+                text.SetActive(false);
+            }
         }
     }
     private void OnTriggerExit(Collider other)
@@ -42,6 +52,7 @@ public class DoorScript : MonoBehaviour
         {
             text.SetActive(false);
             nextToDoor = false;
+            compText.SetActive(false);
         }
     }
 }
