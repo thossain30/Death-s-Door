@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.346351, g: 0.43255633, b: 0.6509434, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 104539992}
   - component: {fileID: 104539991}
-  - component: {fileID: 104539994}
   - component: {fileID: 104539993}
   m_Layer: 0
   m_Name: GroundSpawner
@@ -179,21 +178,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 104539990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbb5f1b968075064491dfc90b91eae02, type: 3}
+  m_Script: {fileID: 11500000, guid: c1389cdef76c9c443aaf581a26557d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &104539994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104539990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59ff0ad4567e52541832b4eeb052852d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  obstaclePrefab: {fileID: 874850196155748604, guid: 82c8e37acb07262428b2654a2941730f, type: 3}
 --- !u!1 &223927368
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +385,7 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 264.76
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -569,7 +557,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572016379}
-  m_LocalRotation: {x: 0.21046957, y: -0.00000005715403, z: 0.00000009437631, w: 0.97760046}
+  m_LocalRotation: {x: 0.21046944, y: -0.000000057155216, z: 0.00000009437716, w: 0.97760046}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -667,7 +655,7 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 264.76
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -787,7 +775,7 @@ Camera:
   m_GameObject: {fileID: 753639351}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.08627451, g: 0.15686275, b: 0.33333334, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1123,7 +1111,7 @@ MonoBehaviour:
     Dutch: 0
   m_YAxis:
     Value: 1
-    m_MaxSpeed: 6
+    m_MaxSpeed: 7.07
     m_AccelTime: 0.2
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -1131,7 +1119,7 @@ MonoBehaviour:
     m_InvertAxis: 0
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 264.76
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -1312,7 +1300,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.03189744, g: 0.20237978, b: 0.5283019, a: 1}
+  m_Color: {r: 0.641812, g: 0.74956644, b: 0.9528302, a: 1}
   m_Intensity: 1.03
   m_Range: 10
   m_SpotAngle: 30
@@ -1467,7 +1455,7 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 264.76
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -1544,7 +1532,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279907645}
-  m_LocalRotation: {x: 0.2254881, y: -0.0024364113, z: 0.00056452525, w: 0.97424275}
+  m_LocalRotation: {x: 0.22548746, y: -0.0024271419, z: 0.00056238665, w: 0.9742429}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

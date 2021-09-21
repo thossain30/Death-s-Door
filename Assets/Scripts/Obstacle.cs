@@ -12,11 +12,9 @@ public class Obstacle : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collision detected!");
         if (other.gameObject.tag == "Player")
         {
             //kills the player
-            Debug.Log("collided with player");
             movement.Die();
         }
     }

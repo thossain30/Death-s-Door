@@ -15,7 +15,7 @@ public class GroundTile : MonoBehaviour
     }
     private void Update()
     {
-        if (count == 20) {
+        if (count == 40) {
             complete = true;
         }
     }
@@ -29,7 +29,7 @@ public class GroundTile : MonoBehaviour
     public void spawnObstacle()
     {
         //index for whether obstacle spawns left, middle or right
-        int obstacleSpawnIndex = Random.Range(4, 7);
+        int obstacleSpawnIndex = Random.Range(2, 5);
         //basically a bool for whether an obstacle spawns or not
         int spawnPerhaps = Random.Range(0, 3);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;

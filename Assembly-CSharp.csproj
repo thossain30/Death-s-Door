@@ -111,7 +111,6 @@
     <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\GaussianFilter.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineComposer.cs" />
-    <Compile Include="Assets\Scripts\Complete.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CameraState.cs" />
