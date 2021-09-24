@@ -36,7 +36,7 @@ public class RunnerMovement : MonoBehaviour
 
             float horizontal = Input.GetAxis("Horizontal");
 
-            controller.Move(transform.forward * speed * Time.deltaTime + new Vector3(horizontal * 0.04f, 0, 0));
+            controller.Move(transform.forward * speed * Time.deltaTime + new Vector3(horizontal * 0.12f, 0, 0));
             velocity.y += (gravity * Time.deltaTime);
             controller.Move(velocity * Time.deltaTime);
         }
