@@ -9,6 +9,8 @@ public class mazefloor : MonoBehaviour
     void Start()
     {
         partSys = transform.GetChild(0).gameObject;
+        Debug.Log(partSys);
+        partSys.SetActive(false);
     }
 
     // Update is called once per frame
