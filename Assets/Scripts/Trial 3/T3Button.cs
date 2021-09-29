@@ -8,16 +8,28 @@ public class T3Button : MonoBehaviour
     public int x = -1;
     public int y = -1;
 
-    // Start is called before the first frame update
-    void Start()
+    public bool isPressed = false;
+
+    private Color currentColor;
+    private MeshRenderer meshRenderer;
+
+    private void Awake()
     {
-        
+        meshRenderer = GetComponent<MeshRenderer>();
+
+        T3ButtonPuzzleManager.AddT3ButtonToGrid(this);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public Color GetColor()
     {
-        
+        return currentColor;
+    }
+
+    public void SetColor(Color c)
+    {
+        currentColor = c;
+        meshRenderer.material.color = c;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,6 +39,10 @@ public class T3Button : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("mango");
+        Debug.Log("Button pressed!");
+        if (other.CompareTag("Player")) // && not intangible
+        {
+            T3ButtonPuzzleManager.AddButtonToSequence(this);
+        }
     }
 }
