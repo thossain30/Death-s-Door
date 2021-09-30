@@ -789,9 +789,9 @@ ModelImporter:
     foreArmTwist: 0.5
     upperLegTwist: 0.5
     legTwist: 0.5
-    armStretch: 0.05
-    legStretch: 0.05
-    feetSpacing: 0
+    armStretch: 0.484
+    legStretch: 0.059
+    feetSpacing: 0.518
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
