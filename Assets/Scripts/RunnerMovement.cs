@@ -35,8 +35,17 @@ public class RunnerMovement : MonoBehaviour
             anim1.SetBool("atSpawn", false);
 
             float horizontal = Input.GetAxis("Horizontal");
+            float m = 0;
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                m = -2.5f;
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                m = 2.5f;
+            }
 
-            controller.Move(transform.forward * speed * Time.deltaTime + new Vector3(horizontal * 0.1f, 0, 0));
+            controller.Move(transform.forward * speed * Time.deltaTime + new Vector3(horizontal * 0.099f, 0, 0));
             velocity.y += (gravity * Time.deltaTime);
             controller.Move(velocity * Time.deltaTime);
         }

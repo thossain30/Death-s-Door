@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class mazefloor : MonoBehaviour
 {
     private GameObject partSys;
+    public GameObject artifact;
+    public GameObject text;
     public static bool complete = false;
     // Start is called before the first frame update
     void Start()
@@ -13,12 +15,17 @@ public class mazefloor : MonoBehaviour
         partSys = transform.GetChild(0).gameObject;
         Debug.Log(partSys);
         partSys.SetActive(false);
+        artifact.SetActive(false);
+        text.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (complete)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,14 +33,9 @@ public class mazefloor : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             partSys.SetActive(true);
-            Debug.Log(complete);
             if (transform.gameObject.name == "FinalFloor")
             {
-                complete = true;
-                if (complete)
-                {
-                    SceneManager.LoadScene(0);
-                }
+                artifact.SetActive(true);
             }
         }
     }

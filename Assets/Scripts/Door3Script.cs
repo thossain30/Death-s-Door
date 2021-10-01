@@ -21,11 +21,11 @@ public class Door3Script : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !GroundTile.complete)
+        if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !T3ButtonPuzzleManager.complete)
         {
             SceneManager.LoadScene(3);
         }
-        if (GroundTile.complete) {
+        if (T3ButtonPuzzleManager.complete) {
             rad.enabled = true;
         }
     }
@@ -35,7 +35,8 @@ public class Door3Script : MonoBehaviour
         {
             text.SetActive(true);
             nextToDoor = true;
-            if (GroundTile.complete) {
+            if (T3ButtonPuzzleManager.complete)
+            {
                 compText.SetActive(true);
                 text.SetActive(false);
             }

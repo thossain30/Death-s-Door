@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class T3ButtonPuzzleManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     public T3Puzzle currentPuzzle;
     private List<int> goalSequence = new List<int>();
     public bool canRepeat = false;
+    public static bool complete = false;
 
 
     // colors set in editor
@@ -37,7 +39,6 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-
         SetPuzzle(currentPuzzle);
     }
 
@@ -47,6 +48,10 @@ public class T3ButtonPuzzleManager : MonoBehaviour
         switch (s)
         {
             case State.active:
+                if (complete)
+                {
+                    SceneManager.LoadScene(0);
+                }
                 break;
 
             case State.inactive:
@@ -75,6 +80,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
                         StartCoroutine(RecursiveSetButtonColor(b, correctColor, activeBlankColor, Random.Range(0.8f, 1.2f), 300));
                     }
                 }
+                complete = true;
                 break;
 
         }
