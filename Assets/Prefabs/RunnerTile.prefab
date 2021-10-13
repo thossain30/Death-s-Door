@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 6485125123990181964}
   - component: {fileID: 3506893216740813262}
   m_Layer: 0
-  m_Name: CaveTile
+  m_Name: RunnerTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1389cdef76c9c443aaf581a26557d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max: 10
   obstaclePrefab: {fileID: 874850196155748604, guid: 82c8e37acb07262428b2654a2941730f, type: 3}
 --- !u!1 &4290542049068898574
 GameObject:
@@ -633,7 +634,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.15250975, g: 0.46666667, b: 0.8156863, a: 1}
+      maxColor: {r: 0.61698115, g: 1, b: 0.6940208, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     public static int count = 0;
+    public int max = 10;
     GroundSpawner ground;
     public static bool complete = false;
     public GameObject obstaclePrefab;
@@ -15,7 +16,7 @@ public class GroundTile : MonoBehaviour
     }
     private void Update()
     {
-        if (count == 40) {
+        if (count == max) {
             complete = true;
         }
     }
