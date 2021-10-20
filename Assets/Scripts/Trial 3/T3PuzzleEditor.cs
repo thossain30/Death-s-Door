@@ -5,8 +5,7 @@ using UnityEditor;
 [CustomEditor(typeof(T3Puzzle))]
 public class LevelEditor : Editor
 {
-
-
+    #if UNITY_EDITOR
     public override void OnInspectorGUI()
     {
         //ScriptableObject target = this; 
@@ -116,6 +115,7 @@ public class LevelEditor : Editor
             EditorUtility.SetDirty(puzzle);
         }
     }
+    #endif
 
     private int GetIndex(int x, int y)
     {

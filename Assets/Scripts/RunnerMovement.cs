@@ -13,39 +13,39 @@ public class RunnerMovement : MonoBehaviour
     Vector3 velocity;
     public CharacterController controller;
     public Animator anim1;
+    public Animator dogAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim1 = GetComponent<Animator>();
+        dogAnim.SetBool("atSpawn", true);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //this if statement runs when player is not on spawn tile
         if (!spawn.onSpawn)
         {
+            //breaks out of if statement if player dies
             if (!alive) return;
+            //checks if trial has been completed
             if (GroundTile.complete)
             {
                 SceneManager.LoadScene(0);
                 return;
             }
+            //sets the animators for the player and the dog to their running state once no longer in spawn
             anim1.SetBool("atSpawn", false);
+            dogAnim.SetBool("atSpawn", false);
 
+            //code responsible for moving player left and right!
             float horizontal = Input.GetAxis("Horizontal");
-            float m = 0;
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                m = -2.5f;
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                m = 2.5f;
-            }
 
-            controller.Move(transform.forward * speed * Time.deltaTime + new Vector3(horizontal * 0.099f, 0, 0));
+            //does the moving of the player 
+            controller.Move(transform.forward * speed * Time.deltaTime + new Vector3(horizontal * 0.105f, 0, 0));
             velocity.y += (gravity * Time.deltaTime);
             controller.Move(velocity * Time.deltaTime);
         }

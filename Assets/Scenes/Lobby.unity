@@ -822,7 +822,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604244890}
-  m_LocalRotation: {x: 0.22548574, y: -0.002532032, z: 0.0005864347, w: 0.97424304}
+  m_LocalRotation: {x: 0.22549048, y: -0.0024468398, z: 0.0005670416, w: 0.97424215}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1154,7 +1154,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017319847}
   serializedVersion: 7
-  lengthInSec: 5
+  lengthInSec: 2.13
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -1229,7 +1229,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2.09
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1398,7 +1398,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.66
+      scalar: 1.17
       minScalar: 0.06
       maxCurve:
         serializedVersion: 2
@@ -2418,14 +2418,14 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 0.5660378, g: 0.5521538, b: 0.5521538, a: 1}
-        key2: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}
+        key1: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
+        key2: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 33346
+        ctime0: 30647
         ctime1: 65535
         ctime2: 65535
         ctime3: 0
@@ -2435,7 +2435,7 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 65535
-        atime2: 0
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
@@ -7231,7 +7231,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954225772}
-  m_LocalRotation: {x: 0.21046942, y: -0.000000057152786, z: 0.00000009437539, w: 0.97760046}
+  m_LocalRotation: {x: 0.21046935, y: -0.00000005720621, z: 0.00000009441423, w: 0.97760046}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
