@@ -18,6 +18,8 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     public static bool complete = false;
 
 
+    public UI_T3DisplayManager displayManager;
+
     // colors set in editor
     public Color inactiveColor;
     public Color activeBlankColor;
@@ -137,6 +139,8 @@ public class T3ButtonPuzzleManager : MonoBehaviour
                 }
             }
         }
+
+        displayManager.DisplayPuzzle(puzzle);
     }
 
     private bool CheckLegalState()
