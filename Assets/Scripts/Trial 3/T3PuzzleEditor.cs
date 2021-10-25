@@ -1,11 +1,13 @@
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(T3Puzzle))]
 public class LevelEditor : Editor
 {
-    #if UNITY_EDITOR
     public override void OnInspectorGUI()
     {
         //ScriptableObject target = this; 
@@ -115,10 +117,10 @@ public class LevelEditor : Editor
             EditorUtility.SetDirty(puzzle);
         }
     }
-    #endif
 
     private int GetIndex(int x, int y)
     {
         return T3Puzzle.boardSize * y + x;
     }
 }
+#endif

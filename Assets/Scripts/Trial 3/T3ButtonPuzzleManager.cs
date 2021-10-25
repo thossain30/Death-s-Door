@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class T3ButtonPuzzleManager : MonoBehaviour
 {
+    public static System.EventHandler<System.EventArgs> onPuzzleComplete;
+
     public State state;
 
     private static T3Button[,] buttonGrid = new T3Button[5, 5];
@@ -41,7 +42,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        SetPuzzle(currentPuzzle);
+        //SetPuzzle(currentPuzzle);
     }
 
 
@@ -50,10 +51,10 @@ public class T3ButtonPuzzleManager : MonoBehaviour
         switch (s)
         {
             case State.active:
-                if (complete)
-                {
-                    SceneManager.LoadScene(0);
-                }
+                //if (complete)
+                //{
+                //    SceneManager.LoadScene(0);
+                //}
                 break;
 
             case State.inactive:
@@ -75,14 +76,14 @@ public class T3ButtonPuzzleManager : MonoBehaviour
                 Debug.Log(buttonGrid.Length);
                 foreach (T3Button b in buttonGrid)
                 {
-                    Debug.Log("chec!");
+                    //Debug.Log("chec!");
                     if (goalSequence.Contains(b.buttonID))
                     {
-                        Debug.Log("Setting color!");
+                        //Debug.Log("Setting color!");
                         StartCoroutine(RecursiveSetButtonColor(b, correctColor, activeBlankColor, Random.Range(0.8f, 1.2f), 300));
                     }
                 }
-                complete = true;
+                //complete = true;
                 break;
 
         }
@@ -287,6 +288,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
             // check if matches goal
             if (CheckGoalState())
             {
+                onPuzzleComplete.Invoke(this, new System.EventArgs());
                 SetState(State.party);
             }
         }
