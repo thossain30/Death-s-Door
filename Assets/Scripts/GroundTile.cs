@@ -5,7 +5,7 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     public static int count = 0;
-    public int max = 20;
+    public int max = 100;
     GroundSpawner ground;
     public static bool complete = false;
     public GameObject obstaclePrefab;
@@ -26,6 +26,7 @@ public class GroundTile : MonoBehaviour
         ground.spawnTile(true);
         Destroy(gameObject, 1);
         count++;
+        Debug.Log(count);
     }
     public void spawnObstacle()
     {
@@ -36,7 +37,7 @@ public class GroundTile : MonoBehaviour
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         if (spawnPerhaps >= 1)
         {
-            Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
+            Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity);
         }
     }
 }

@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Trial1.unity
     guid: 076214752805b4e4b87c388b4772d453
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Trial2.unity
     guid: 91e18f29db31cb741ac77073e8539e7d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Trial3.unity
     guid: c6e07f963dcb14e4495e84b49a64bdc5
   m_configObjects: {}

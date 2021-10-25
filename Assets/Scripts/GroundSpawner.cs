@@ -28,9 +28,8 @@ public class GroundSpawner : MonoBehaviour
     }
     public void spawnTile(bool spawnObs)
     {
-        GameObject temp2 = Instantiate(groundTile, nextSpawnPoint, Quaternion.Euler(0, 0, 0));
+        GameObject temp2 = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
         nextSpawnPoint = temp2.transform.GetChild(0).transform.position;
-        Debug.Log(temp2.transform.GetChild(0));
 
         if (spawnObs) {
             temp2.GetComponent<GroundTile>().spawnObstacle();
