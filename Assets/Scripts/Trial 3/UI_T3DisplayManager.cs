@@ -22,11 +22,21 @@ public class UI_T3DisplayManager : MonoBehaviour
     public float pingDuration;
     public AnimationCurve pingCurve;
 
+    //private void OnEnable()
+    //{
+    //    T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
+    //}
+
+    //private void OnDisable()
+    //{
+    //    T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
+    //}
+
     private void Update()
     {
         Vector3 playerPos = player.transform.position - transform.position;
         float newRotation = 270 - (Mathf.Atan2(playerPos.z, playerPos.x) * Mathf.Rad2Deg);
-        Debug.Log(newRotation);
+        //Debug.Log(newRotation);
         StartCoroutine(SetRotation(newRotation, rotationDelay));
     }
 
@@ -39,6 +49,8 @@ public class UI_T3DisplayManager : MonoBehaviour
 
     public void DisplayPuzzle(T3Puzzle puzzle)
     {
+        ResetDisplay();
+
         switch (puzzle.puzzleType)
         {
             case T3Puzzle.PuzzleType.ordered:
@@ -96,10 +108,16 @@ public class UI_T3DisplayManager : MonoBehaviour
         }
     }
 
+    //private void OnPuzzleComplete(object sender, System.EventArgs e)
+    //{
+    //    ResetDisplay();
+    //}
+
     public void ResetDisplay()
     {
-        StopCoroutine(orderedCoroutine);
-        StopCoroutine(orderedSubcoroutine);
+        //if (orderedCoroutine != null) StopCoroutine(orderedCoroutine);
+        //if (orderedSubcoroutine != null) StopCoroutine(orderedSubcoroutine);
+        StopAllCoroutines();
 
         for (int i = 0; i < displays.Length; i++)
         {
