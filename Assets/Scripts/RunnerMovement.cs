@@ -8,7 +8,8 @@ public class RunnerMovement : MonoBehaviour
 {
     public spawnTile spawn;
     bool alive = true;
-    public float speed = 7.0f;
+    public float speed;
+    private float maxSpeed = 16f;
     public float gravity = -9.81f;
     Vector3 velocity;
     public CharacterController controller;
@@ -21,6 +22,7 @@ public class RunnerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim1 = GetComponent<Animator>();
         dogAnim.SetBool("atSpawn", true);
+        speed = maxSpeed;
     }
 
     // Update is called once per frame
@@ -48,6 +50,10 @@ public class RunnerMovement : MonoBehaviour
             controller.Move(transform.forward * speed * Time.deltaTime + new Vector3(horizontal * 0.105f, 0, 0));
             velocity.y += (gravity * Time.deltaTime);
             controller.Move(velocity * Time.deltaTime);
+        }
+        if (speed < maxSpeed)
+        {
+            speed += 1 * Time.deltaTime;
         }
     }
     //This should eventually spawn the player to the last checkpoint (or spawn) instead of Lobby!

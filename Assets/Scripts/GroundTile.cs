@@ -9,6 +9,7 @@ public class GroundTile : MonoBehaviour
     GroundSpawner ground;
     public static bool complete = false;
     public GameObject obstaclePrefab;
+    GameObject ob;
     // Start is called before the first frame update
     private void Start()
     {
@@ -24,9 +25,12 @@ public class GroundTile : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         ground.spawnTile(true);
-        Destroy(gameObject, 1);
+        Destroy(gameObject,1);
+        if (ob != null)
+        {
+            Destroy(ob);
+        }
         count++;
-        Debug.Log(count);
     }
     public void spawnObstacle()
     {
@@ -37,7 +41,7 @@ public class GroundTile : MonoBehaviour
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         if (spawnPerhaps >= 1)
         {
-            Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity);
+             ob = Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity);
         }
     }
 }

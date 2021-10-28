@@ -14,8 +14,7 @@ public class Obstacle : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            //kills the player
-            movement.Die();
+            movement.speed -= 1.75f;
         }
     }
 }

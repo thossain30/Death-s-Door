@@ -14,7 +14,7 @@ public class thirdPersonMovement : MonoBehaviour
     Vector3 velocity;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
-    Animator anim;
+    public Animator anim;
 
     private void Start()
     {

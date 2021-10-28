@@ -8,8 +8,6 @@ public class GroundSpawner : MonoBehaviour
     Vector3 nextSpawnPoint;
     //number of tiles to spawn ahead of player
     private int length = 10;
-    private float randomValue = 0.01f;
-    private float startTime;
     public float timeOffset = 0.4f;
 
     private void Start()
