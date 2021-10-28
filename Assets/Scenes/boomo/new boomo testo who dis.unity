@@ -198,37 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10009692}
   m_CullTransparentMesh: 1
---- !u!1 &47418279
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 47418280}
-  m_Layer: 0
-  m_Name: test dog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &47418280
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47418279}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 451833471}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &69449644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,7 +414,7 @@ Transform:
   - {fileID: 1202224894}
   - {fileID: 682388804}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &128192871 stripped
 RectTransform:
@@ -636,7 +605,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64213f6f6ea6f974491dd26126116a4d, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -719,7 +688,7 @@ Transform:
   - {fileID: 1319792672}
   - {fileID: 378303827}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &195251937
 PrefabInstance:
@@ -1342,7 +1311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &275661931
 PrefabInstance:
@@ -1664,7 +1633,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64213f6f6ea6f974491dd26126116a4d, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1749,6 +1718,275 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877e08e0191d6c947994d22a8f111767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &426247919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 426247921}
+  - component: {fileID: 426247920}
+  m_Layer: 0
+  m_Name: ActionSequence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &426247920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426247919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1b4b1788bf23540b60a7ef387857cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sequence:
+  - trigger: 0
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Welcome to Trial 3!
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 1
+    delayDuration: 1
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: something something step on the buttons in order
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 0
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 496610048}
+          m_TargetAssemblyTypeName: T3ButtonPuzzleManager, Assembly-CSharp
+          m_MethodName: SetPuzzle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 36a5ee1f4ba0b584fb1d57f4b69d16a3, type: 2}
+            m_ObjectArgumentAssemblyTypeName: T3Puzzle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 2
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Great work, keep it up!
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 0
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 496610048}
+          m_TargetAssemblyTypeName: T3ButtonPuzzleManager, Assembly-CSharp
+          m_MethodName: SetPuzzle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: a85afd3eae262a14d831b9fa56d473ba, type: 2}
+            m_ObjectArgumentAssemblyTypeName: T3Puzzle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 2
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 496610048}
+          m_TargetAssemblyTypeName: T3ButtonPuzzleManager, Assembly-CSharp
+          m_MethodName: SetPuzzle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 4af660076e65085408b27a13b74da7e8, type: 2}
+            m_ObjectArgumentAssemblyTypeName: T3Puzzle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 2
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 'Ok now we have a new task: Just fill the shape'
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 2
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 'Ok now we have a new task: Just fill the shape, in
+              any order'
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 0
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 496610048}
+          m_TargetAssemblyTypeName: T3ButtonPuzzleManager, Assembly-CSharp
+          m_MethodName: SetPuzzle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: a2677b31d956b614f8a6179009aed803, type: 2}
+            m_ObjectArgumentAssemblyTypeName: T3Puzzle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 'Ok now we have a new task: Just fill the shape, in
+              any order'
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 2
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 496610048}
+          m_TargetAssemblyTypeName: T3ButtonPuzzleManager, Assembly-CSharp
+          m_MethodName: SetPuzzle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: ca67a6af46f64624bb4dd15ddda6a897, type: 2}
+            m_ObjectArgumentAssemblyTypeName: T3Puzzle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 'Ok now we have a new task: Just fill the shape, in
+              any order'
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 2
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 496610048}
+          m_TargetAssemblyTypeName: T3ButtonPuzzleManager, Assembly-CSharp
+          m_MethodName: SetPuzzle
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 981a82e5dfccb1742a87d1b2d8e861e9, type: 2}
+            m_ObjectArgumentAssemblyTypeName: T3Puzzle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 'Ok now we have a new task: Just fill the shape, in
+              any order'
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 2
+    delayDuration: 0
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: That's all tasks complete, great job crewmate!
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 1
+    delayDuration: 2
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: CompleteTrial
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: That's all tasks complete, great job crewmate!
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!4 &426247921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426247919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &448400364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1846,68 +2084,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36ea93206cd802f43a20a3e6db1c5c73, type: 3}
---- !u!1001 &451833470
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 47418280}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 20.92
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-      propertyPath: m_Name
-      value: Dog2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
---- !u!4 &451833471 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 99ed853f5d3ea4d468634d839cc1c49d, type: 3}
-  m_PrefabInstance: {fileID: 451833470}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &470649141 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6362749766558952373, guid: 36ea93206cd802f43a20a3e6db1c5c73, type: 3}
@@ -1976,7 +2152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &496610050
 BoxCollider:
@@ -2084,7 +2260,7 @@ RectTransform:
   m_Children:
   - {fileID: 1923771852}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2443,7 +2619,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572016379}
-  m_LocalRotation: {x: 0.07120215, y: -0.00000006996461, z: 0.000000085542204, w: 0.9974619}
+  m_LocalRotation: {x: 0.071202286, y: -0.00000006996604, z: 0.00000008554366, w: 0.9974619}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3573,7 +3749,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64213f6f6ea6f974491dd26126116a4d, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9445,7 +9621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 123.604004, y: 0, z: 0}
 --- !u!224 &1104996764 stripped
 RectTransform:
@@ -10270,7 +10446,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279907645}
-  m_LocalRotation: {x: 0.07368001, y: -0.0019544773, z: 0.00014499863, w: 0.99728006}
+  m_LocalRotation: {x: 0.07368403, y: -0.0019502746, z: 0.00014470005, w: 0.99727976}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10702,7 +10878,7 @@ Transform:
   - {fileID: 1640295065}
   - {fileID: 350013896}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1424274637 stripped
 Transform:
@@ -11064,7 +11240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1593885575 stripped
 RectTransform:
@@ -11134,7 +11310,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64213f6f6ea6f974491dd26126116a4d, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11518,7 +11694,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64213f6f6ea6f974491dd26126116a4d, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
