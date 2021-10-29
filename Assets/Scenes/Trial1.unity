@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundTile: {fileID: 4290542047509882189, guid: 9bf6a5c828ab7be458d173312d713554, type: 3}
+  endTile: {fileID: 2401223549151425545, guid: 317f72c0e7e44ba4dacd223ec5029e75, type: 3}
   timeOffset: 0.4
 --- !u!4 &104539992
 Transform:
@@ -765,7 +766,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572016379}
-  m_LocalRotation: {x: 0.16931039, y: -0.000001760896, z: 0.00000038356336, w: 0.9855628}
+  m_LocalRotation: {x: 0.16931036, y: -0.000001760896, z: 0.00000038353036, w: 0.9855628}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1983,7 +1984,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279907645}
-  m_LocalRotation: {x: 0.18314116, y: -0.0023529963, z: 0.00043853093, w: 0.9830838}
+  m_LocalRotation: {x: 0.18314227, y: -0.002354213, z: 0.00043881813, w: 0.98308355}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

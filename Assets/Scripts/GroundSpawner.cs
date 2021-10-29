@@ -5,6 +5,9 @@ using UnityEngine;
 public class GroundSpawner : MonoBehaviour
 {
     public GameObject groundTile;
+    public GameObject endTile;
+    static int endTileCount = 0;
+    private bool spawn = false;
     Vector3 nextSpawnPoint;
     //number of tiles to spawn ahead of player
     private int length = 10;
@@ -28,9 +31,18 @@ public class GroundSpawner : MonoBehaviour
     {
         GameObject temp2 = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
         nextSpawnPoint = temp2.transform.GetChild(0).transform.position;
-
-        if (spawnObs) {
+        if (spawnObs)
+        {
             temp2.GetComponent<GroundTile>().spawnObstacle();
+        }
+    }
+    public void spawnEndTile()
+    {
+        //here to ensure only one endtile gets spawned (probably a better way tbh)
+        if (endTileCount <= 1)
+        {
+            Instantiate(endTile, nextSpawnPoint, Quaternion.identity);
+            endTileCount++;
         }
     }
 }
