@@ -32,14 +32,9 @@ public class T3Button : MonoBehaviour
         meshRenderer.material.color = c;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("banana");
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Button pressed!");
+        //Debug.Log("Button pressed!");
         if (other.CompareTag("Player")) // && not intangible
         {
             T3ButtonPuzzleManager.AddButtonToSequence(this);
