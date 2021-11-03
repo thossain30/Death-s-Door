@@ -22,7 +22,7 @@ namespace Cinemachine
     {
         /// <summary>Used by the Inspector Editor to display on-screen guides.</summary>
         [NoSaveDuringPlay, HideInInspector]
-        public Action OnGUICallback = null;
+        public System.Action OnGUICallback = null;
 
         /// <summary>Target offset from the object's center in LOCAL space which
         /// the Composer tracks. Use this to fine-tune the tracking target position

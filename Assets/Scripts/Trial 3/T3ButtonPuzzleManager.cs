@@ -90,7 +90,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
         state = s;
     }
 
-    private void ResetGrid()
+    public void ResetGrid()
     {
         SetState(State.active);
 

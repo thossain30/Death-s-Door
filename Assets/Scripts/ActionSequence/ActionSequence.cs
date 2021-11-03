@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class T3ActionSequence : MonoBehaviour
+public class ActionSequence : MonoBehaviour
 {
-    public List<T3Action> sequence = new List<T3Action>();
+    public List<ASAction> sequence = new List<ASAction>();
     private int sequenceIndex;
 
     private Coroutine delayedAction;
@@ -18,11 +18,13 @@ public class T3ActionSequence : MonoBehaviour
     private void OnEnable()
     {
         T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
+        DialogueManager.onDialogueComplete += OnDialogueComplete;
     }
 
     private void OnDisable()
     {
         T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
+        DialogueManager.onDialogueComplete += OnDialogueComplete;
     }
 
     void Update()
@@ -40,12 +42,12 @@ public class T3ActionSequence : MonoBehaviour
 
         switch (sequence[sequenceIndex].trigger)
         {
-            case T3Action.Trigger.None:
-                sequence[sequenceIndex].onTrigger.Invoke();
+            case ASAction.Trigger.None:
+                InvokeASAction(sequence[sequenceIndex]);
                 sequenceIndex += 1;
                 CheckSequence();
                 break;
-            case T3Action.Trigger.Delay:
+            case ASAction.Trigger.Delay:
                 if (delayedAction == null)
                 {
                     float delay = sequence[sequenceIndex].delayDuration;
@@ -55,11 +57,19 @@ public class T3ActionSequence : MonoBehaviour
         }
     }
 
+    private void InvokeASAction(ASAction action)
+    {
+        if (action.onTrigger != null)
+            action.onTrigger.Invoke();
+        if (action.onTriggerDialogue != null)
+            action.onTriggerDialogue.Invoke(action.dialogueParams);
+    }
+
     private IEnumerator InvokeEventAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
 
-        sequence[sequenceIndex].onTrigger.Invoke();
+        InvokeASAction(sequence[sequenceIndex]);
         sequenceIndex += 1;
         CheckSequence();
 
@@ -68,9 +78,19 @@ public class T3ActionSequence : MonoBehaviour
 
     private void OnPuzzleComplete(object sender, System.EventArgs e)
     {
-        if (sequence[sequenceIndex].trigger == T3Action.Trigger.OnPuzzleComplete)
+        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnPuzzleComplete)
         {
-            sequence[sequenceIndex].onTrigger.Invoke();
+            InvokeASAction(sequence[sequenceIndex]);
+            sequenceIndex += 1;
+            CheckSequence();
+        }
+    }
+
+    private void OnDialogueComplete(object sender, System.EventArgs e)
+    {
+        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnDialogueComplete)
+        {
+            InvokeASAction(sequence[sequenceIndex]);
             sequenceIndex += 1;
             CheckSequence();
         }
