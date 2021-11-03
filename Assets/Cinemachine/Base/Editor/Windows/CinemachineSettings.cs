@@ -214,7 +214,7 @@ namespace Cinemachine.Editor
         private static readonly string kCoreSettingsFoldKey     = "CNMCN_Core_Folded";
         private static readonly string kComposerSettingsFoldKey = "CNMCN_Composer_Folded";
 
-        internal static event Action AdditionalCategories = null;
+        internal static event System.Action AdditionalCategories = null;
 
         static CinemachineSettings()
         {

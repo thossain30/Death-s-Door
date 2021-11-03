@@ -36,7 +36,7 @@ namespace Cinemachine
     {
         /// <summary>Used by the Inspector Editor to display on-screen guides.</summary>
         [NoSaveDuringPlay, HideInInspector]
-        public Action OnGUICallback = null;
+        public System.Action OnGUICallback = null;
 
         /// <summary>This setting will instruct the composer to adjust its target offset based
         /// on the motion of the target.  The composer will look at a point where it estimates
