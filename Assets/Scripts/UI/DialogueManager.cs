@@ -9,10 +9,12 @@ public class DialogueManager : MonoBehaviour
     public static System.EventHandler<System.EventArgs> onDialogueComplete;
 
 
+    private static bool isDialogueOpen;
     private DialogueParameters currentParameters;
 
     public float typeDelay;
     private bool isTyping;
+    private bool isTypingComplete;
     private Coroutine typingCoroutine;
 
 
@@ -22,6 +24,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descText;
     public Image image;
+
+    public CanvasGroupAnimator fadeAnimator;
 
 
     [System.Serializable]
@@ -41,22 +45,52 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && Input.GetButtonDown("Fire1"))
         {
             AdvanceDialogue();
         }
     }
 
+
+    public static bool IsDialogueOpen()
+    {
+        return isDialogueOpen;
+    }
+
     public void SetDialogueActive(bool enabled)
     {
-        dialoguePanel.SetActive(enabled);
+        if (enabled)
+            EnableDialogue();
+        else
+            DisableDialogue();
     }
+
+    private void EnableDialogue(System.Action callback=null)
+    {
+        dialoguePanel.SetActive(true);
+        isDialogueOpen = true;
+        fadeAnimator.StartFadeIn(callback);
+    }
+
+    private void DisableDialogue()
+    {
+        isDialogueOpen = false;
+        fadeAnimator.StartFadeOut(() =>
+        {
+            if (dialogueAlpha.alpha == 0) dialoguePanel.SetActive(false);
+        });
+    }
+
 
     public void StartDialogue(DialogueParameters parameters)
     {
         SetDialogueActive(true);
         SetDialogue(parameters);
-        typingCoroutine = StartCoroutine(TypeText());
+
+        descText.text = "";
+        isTypingComplete = false;
+
+        EnableDialogue(StartTypingText);
     }
 
     public void SetDialogue(DialogueParameters parameters)
@@ -69,16 +103,21 @@ public class DialogueManager : MonoBehaviour
 
     public void AdvanceDialogue()
     {
-        if (isTyping)
+        if (!isTypingComplete)
         {
             TypeAllText();
         }
         else
         {
-            SetDialogueActive(false);
+            DisableDialogue();
 
             onDialogueComplete.Invoke(this, null);
         }
+    }
+
+    private void StartTypingText()
+    {
+        typingCoroutine = StartCoroutine(TypeText());
     }
 
     private IEnumerator TypeText()
@@ -86,7 +125,7 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
         string s = "";
 
-        for (int i = 0; i < currentParameters.desc.Length; i++)
+        for (int i = 0; i < currentParameters.desc.Length && !isTypingComplete; i++)
         {
             // to properly type, set texts alpha to 0 at start and to 1 char by char
             s += currentParameters.desc[i];
@@ -104,6 +143,7 @@ public class DialogueManager : MonoBehaviour
 
         descText.text = currentParameters.desc;
         isTyping = false;
+        isTypingComplete = true;
     }
 
     private void TypeAllText()
@@ -113,6 +153,7 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(typingCoroutine);
         }
         isTyping = false;
+        isTypingComplete = true;
 
         descText.text = currentParameters.desc;
     }
