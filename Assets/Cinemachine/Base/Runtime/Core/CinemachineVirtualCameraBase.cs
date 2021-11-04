@@ -29,7 +29,7 @@ namespace Cinemachine
         /// <summary>This is deprecated.  It is here to support the soon-to-be-removed
         /// Cinemachine Debugger in the Editor.</summary>
         [HideInInspector, NoSaveDuringPlay]
-        public System.Action CinemachineGUIDebuggerCallback = null;
+        public Action CinemachineGUIDebuggerCallback = null;
 
         /// <summary>Inspector control - Use for hiding sections of the Inspector UI.</summary>
         [HideInInspector, SerializeField, NoSaveDuringPlay]
