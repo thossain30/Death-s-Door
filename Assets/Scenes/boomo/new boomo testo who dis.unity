@@ -414,7 +414,7 @@ Transform:
   - {fileID: 1202224894}
   - {fileID: 682388804}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &128192871 stripped
 RectTransform:
@@ -688,7 +688,7 @@ Transform:
   - {fileID: 1319792672}
   - {fileID: 378303827}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &195251937
 PrefabInstance:
@@ -1311,7 +1311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &275661931
 PrefabInstance:
@@ -1750,61 +1750,40 @@ MonoBehaviour:
   sequence:
   - trigger: 0
     delayDuration: 0
-    dialogueParams:
-      name: Speaker
-      desc: Hello intern, welcome to Gregory Tech. Game Developers! We hope you're
-        as excited to get started as we are!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
     onTrigger:
       m_PersistentCalls:
-        m_Calls: []
-    onTriggerDialogue:
-      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 502571138}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 0
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Welcome to Trial 3!
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 3
-    delayDuration: 0
-    dialogueParams:
-      name: Speaker
-      desc: Let's start with your first programming ticket! You see that large floating
-        panel over there? Press the buttons in the same order they appear to complete
-        the task!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+  - trigger: 1
+    delayDuration: 1
     onTrigger:
       m_PersistentCalls:
-        m_Calls: []
-    onTriggerDialogue:
-      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 502571138}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 0
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: something something step on the buttons in order
             m_BoolArgument: 0
           m_CallState: 2
   - trigger: 0
     delayDuration: 0
-    dialogueParams:
-      name: 
-      desc: 
-      image: {fileID: 0}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -1820,39 +1799,25 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls: []
   - trigger: 2
     delayDuration: 0
-    dialogueParams:
-      name: Speaker
-      desc: Great work, keep it up! Press 'R' to quickly start your next task!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
     onTrigger:
       m_PersistentCalls:
-        m_Calls: []
-    onTriggerDialogue:
-      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 502571138}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 0
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Great work, keep it up!
             m_BoolArgument: 0
           m_CallState: 2
   - trigger: 0
     delayDuration: 0
-    dialogueParams:
-      name: 
-      desc: 
-      image: {fileID: 0}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -1868,15 +1833,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls: []
   - trigger: 2
     delayDuration: 0
-    dialogueParams:
-      name: 
-      desc: 
-      image: {fileID: 0}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -1892,66 +1850,43 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls: []
   - trigger: 2
     delayDuration: 0
-    dialogueParams:
-      name: Speaker
-      desc: On second thought intern... why don't we try something else? These tickets
-        aren't being completed as well as we'd hoped...
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
     onTrigger:
       m_PersistentCalls:
-        m_Calls: []
-    onTriggerDialogue:
-      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 502571138}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 0
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: 'Ok now we have a new task: Just fill the shape'
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 3
+  - trigger: 2
     delayDuration: 0
-    dialogueParams:
-      name: Speaker
-      desc: Let's try out some work on the art team! Now, you can just fill in the
-        shapes in any order you want. Just make sure that the assets you create match
-        the pattern of what we need!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
     onTrigger:
       m_PersistentCalls:
-        m_Calls: []
-    onTriggerDialogue:
-      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 502571138}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 0
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: 'Ok now we have a new task: Just fill the shape, in
+              any order'
             m_BoolArgument: 0
           m_CallState: 2
   - trigger: 0
     delayDuration: 0
-    dialogueParams:
-      name: 
-      desc: 
-      image: {fileID: 0}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -1968,15 +1903,8 @@ MonoBehaviour:
               any order'
             m_BoolArgument: 0
           m_CallState: 2
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls: []
   - trigger: 2
     delayDuration: 0
-    dialogueParams:
-      name: 
-      desc: 
-      image: {fileID: 0}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -1993,15 +1921,8 @@ MonoBehaviour:
               any order'
             m_BoolArgument: 0
           m_CallState: 2
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls: []
   - trigger: 2
     delayDuration: 0
-    dialogueParams:
-      name: 
-      desc: 
-      image: {fileID: 0}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -2018,64 +1939,25 @@ MonoBehaviour:
               any order'
             m_BoolArgument: 0
           m_CallState: 2
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls: []
   - trigger: 2
     delayDuration: 0
-    dialogueParams:
-      name: Speaker
-      desc: Okay intern, we're gonna be really busy really soon, so try to keep up.
-        It's time, for the infamous...
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
     onTrigger:
       m_PersistentCalls:
-        m_Calls: []
-    onTriggerDialogue:
-      m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 502571138}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 0
+        - m_Target: {fileID: 426247920}
+          m_TargetAssemblyTypeName: T3ActionSequence, Assembly-CSharp
+          m_MethodName: DebugLogString
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: That's all tasks complete, great job crewmate!
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 3
-    delayDuration: 0
-    dialogueParams:
-      name: Speaker
-      desc: C R U N C H
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
-    onTrigger:
-      m_PersistentCalls:
-        m_Calls: []
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 502571138}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - trigger: 3
+  - trigger: 1
     delayDuration: 2
-    dialogueParams:
-      name: 
-      desc: 
-      image: {fileID: 0}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -2091,9 +1973,6 @@ MonoBehaviour:
             m_StringArgument: That's all tasks complete, great job crewmate!
             m_BoolArgument: 0
           m_CallState: 2
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!4 &426247921
 Transform:
   m_ObjectHideFlags: 0
@@ -2381,7 +2260,7 @@ RectTransform:
   m_Children:
   - {fileID: 1923771852}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2583,17 +2462,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6091527013931769227, guid: 41ecbbb2cfd144843b0f4ceeb2a23564, type: 3}
   m_PrefabInstance: {fileID: 771103218}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &502571138 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8561476829576074469, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-  m_PrefabInstance: {fileID: 8561476829220320359}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a22f680d517e44a9c226d200cffcde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &511608174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6091527013931769227, guid: 41ecbbb2cfd144843b0f4ceeb2a23564, type: 3}
@@ -2751,7 +2619,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572016379}
-  m_LocalRotation: {x: 0.071202286, y: -0.000000069973815, z: 0.000000085551434, w: 0.9974619}
+  m_LocalRotation: {x: 0.071202286, y: -0.00000006996604, z: 0.00000008554366, w: 0.9974619}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9753,7 +9621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 123.604004, y: 0, z: 0}
 --- !u!224 &1104996764 stripped
 RectTransform:
@@ -10578,7 +10446,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279907645}
-  m_LocalRotation: {x: 0.07368161, y: -0.0019563504, z: 0.00014516641, w: 0.99727994}
+  m_LocalRotation: {x: 0.07368403, y: -0.0019502746, z: 0.00014470005, w: 0.99727976}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11010,7 +10878,7 @@ Transform:
   - {fileID: 1640295065}
   - {fileID: 350013896}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1424274637 stripped
 Transform:
@@ -11292,52 +11160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877e08e0191d6c947994d22a8f111767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1540552317
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1540552319}
-  - component: {fileID: 1540552318}
-  m_Layer: 0
-  m_Name: RestartPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1540552318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540552317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021eae9ac0dfce346a60bad1e8962ff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objToReset: {fileID: 2115390536}
-  point: {fileID: 1540552319}
-  puzzleManager: {fileID: 496610048}
---- !u!4 &1540552319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540552317}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.09, z: -16.84}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1550748041 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6362749766558952373, guid: 36ea93206cd802f43a20a3e6db1c5c73, type: 3}
@@ -11418,7 +11240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1593885575 stripped
 RectTransform:
@@ -13325,7 +13147,6 @@ MonoBehaviour:
   gravity: -9.81
   jumpHeight: 1
   turnSmoothTime: 0.1
-  anim: {fileID: 0}
 --- !u!114 &2115390542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13606,197 +13427,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41ecbbb2cfd144843b0f4ceeb2a23564, type: 3}
---- !u!1001 &8561476829220320359
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8561476829576074266, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_Name
-      value: DialogueCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c712abaf9889351428cfa37789895a4b, type: 3}
---- !u!1001 &8743029489432089924
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8743029490166092545, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_Name
-      value: UICanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
