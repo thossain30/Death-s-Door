@@ -59,6 +59,7 @@ public class PauseMenu : MonoBehaviour
     public void ClosePauseMenu()
     {
         isPaused = false;
+        Debug.Log("clicked");
 
         //pausePanel.SetActive(false);
         Time.timeScale = 1;
