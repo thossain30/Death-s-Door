@@ -45,7 +45,8 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && Input.GetButtonDown("Fire1"))
+        //Debug.Log(IsDialogueOpen() + " " + PauseMenu.IsUIOpen() + " " + Input.GetKeyDown(KeyCode.Tab));
+        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("Fire1")))
         {
             AdvanceDialogue();
         }
