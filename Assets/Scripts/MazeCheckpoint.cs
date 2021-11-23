@@ -10,11 +10,11 @@ public class MazeCheckpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wall.SetActive(true);
+        wall.GetComponent<MazeWallsIntangibility>().passable = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        wall.SetActive(false);
+        wall.GetComponent<MazeWallsIntangibility>().passable = true;
     }
 }

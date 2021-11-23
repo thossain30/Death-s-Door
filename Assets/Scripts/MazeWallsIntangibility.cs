@@ -7,6 +7,8 @@ public class MazeWallsIntangibility : MonoBehaviour
     [Header("Objects")]
     public GameObject wall;
     public GameObject player;
+    //makes it so that you can only go intangible and pass after reaching checkpoint
+    public bool passable;
     public Material material;
     Color oldColor = new Color();
     [Header("Opacity Values")]
@@ -19,22 +21,27 @@ public class MazeWallsIntangibility : MonoBehaviour
     void Start()
     {
         Color oldColor = material.color;
+        passable = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         bool IntaOn = player.GetComponent<Intangibility>().IntaOn;
-        if (IntaOn)
+        if (passable)
         {
-            wall.GetComponent<BoxCollider>().enabled = false;//Dissable Collider
-            blueTint = BlueTintValue;
-            ChangeAlpha(wall.GetComponent<MeshRenderer>().material, trans);//Make wall transparent
-        } else
-        {
-            wall.GetComponent<BoxCollider>().enabled = true;//Enable Collider
-            blueTint = oldColor.b;
-            ChangeAlpha(wall.GetComponent<MeshRenderer>().material, normal);//Reset Transparancy
+            if (IntaOn)
+            {
+                wall.GetComponent<BoxCollider>().enabled = false;//Dissable Collider
+                blueTint = BlueTintValue;
+                ChangeAlpha(wall.GetComponent<MeshRenderer>().material, trans);//Make wall transparent
+            }
+            else
+            {
+                wall.GetComponent<BoxCollider>().enabled = true;//Enable Collider
+                blueTint = oldColor.b;
+                ChangeAlpha(wall.GetComponent<MeshRenderer>().material, normal);//Reset Transparancy
+            }
         }
     }
 
