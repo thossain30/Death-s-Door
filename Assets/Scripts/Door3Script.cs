@@ -23,7 +23,7 @@ public class Door3Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !T3ButtonPuzzleManager.complete)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("Trial3");
         }
         if (T3ButtonPuzzleManager.complete) {
             rad.enabled = true;

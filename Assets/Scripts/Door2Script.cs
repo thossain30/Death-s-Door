@@ -23,7 +23,7 @@ public class Door2Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !mazefloor.complete)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Trial2");
         }
         if (mazefloor.complete) {
             rad.enabled = true;

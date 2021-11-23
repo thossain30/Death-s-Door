@@ -28,7 +28,7 @@ public class DoorScript : MonoBehaviour
             {
                 scene = SceneManager.GetActiveScene();
             }
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Trial1Copy");
         }
         if (GroundTile.complete) {
             rad.enabled = true;

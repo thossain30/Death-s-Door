@@ -16,12 +16,15 @@ public class Obstacle : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //bool isInit = player.GetComponent<Intangibility>().IntaOn;
+       
         if (other.gameObject.tag == "Player")
         {
             bool IntaOn = other.GetComponent<Intangibility>().IntaOn;
-            if(!IntaOn)
+            //Slow player if he hits obstacle without intangibility
+            if (!IntaOn)
             {
                 movement.speed -= 1.75f;
+            //Dont slow him if he has it on
             } else if(IntaOn)
             {
                 movement.speed -= 0f;

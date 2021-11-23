@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: 31998c63217580842b494f7da2a13b61
   - enabled: 1
-    path: Assets/Scenes/Trial1.unity
-    guid: 076214752805b4e4b87c388b4772d453
+    path: Assets/Scenes/Trial1Copy.unity
+    guid: 16e969efe9f123e4ba79e0dea1be3647
   - enabled: 1
     path: Assets/Scenes/Trial2.unity
     guid: 91e18f29db31cb741ac77073e8539e7d
