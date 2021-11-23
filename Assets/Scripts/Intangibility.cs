@@ -12,7 +12,7 @@ public class Intangibility : MonoBehaviour
 
     [Header("Intangibility Stamina")]
     public float intaStamina = 100.0f;
-    [SerializeField] private float maxIntaStamina = 100.0f;
+    [SerializeField] public float maxIntaStamina = 100.0f;
     [HideInInspector] public bool IntaOn = false;//Determine weather intagibility is on or off
     [HideInInspector] public bool CanInta = true;//Determine whether player can use Intangibility or not
 
@@ -63,6 +63,11 @@ public class Intangibility : MonoBehaviour
             if (intaStamina > 0)
             {
                 CanInta = true;
+            } else if(intaStamina < 0)
+            {
+                //Regen if less than max
+                intaStamina += intaRegen * Time.deltaTime;
+                UpdateStamina();
             }
          //Using Intangibility
         }else if(IntaOn)
