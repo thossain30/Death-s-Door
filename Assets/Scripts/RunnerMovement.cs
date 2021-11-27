@@ -31,6 +31,7 @@ public class RunnerMovement : MonoBehaviour
         //this if statement runs when player is not on spawn tile
         if (!spawn.onSpawn)
         {
+            
             //breaks out of if statement if player dies
             if (!alive) return;
             //checks if trial has been completed
