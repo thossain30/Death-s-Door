@@ -5,13 +5,19 @@ using UnityEngine;
 public class spawnTile : MonoBehaviour
 {
     public bool onSpawn;
+    public static System.EventHandler<System.EventArgs> onRunning;
     // Start is called before the first frame update
+
+    public void setonSpawn(bool running)
+    {
+        onSpawn = running;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Floor") 
-        { 
-            onSpawn = true;
+        {
+            setonSpawn(true);
         }
     }
 
@@ -24,7 +30,8 @@ public class spawnTile : MonoBehaviour
     {
         if (other.gameObject.tag == "Floor")
         {
-            onSpawn = false;
+            setonSpawn(false);
+            onRunning.Invoke(this, null);
         }
     }
 }
