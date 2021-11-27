@@ -17,14 +17,16 @@ public class ActionSequence : MonoBehaviour
 
     private void OnEnable()
     {
+        GroundTile.onExitTile += OnExitRunnerTile;
         T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
     }
 
     private void OnDisable()
     {
+        GroundTile.onExitTile -= OnExitRunnerTile;
         T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
-        DialogueManager.onDialogueComplete += OnDialogueComplete;
+        DialogueManager.onDialogueComplete -= OnDialogueComplete;
     }
 
     void Update()
@@ -76,9 +78,22 @@ public class ActionSequence : MonoBehaviour
         delayedAction = null;
     }
 
+    private void OnExitRunnerTile(object sender, GroundTile.RunnerTileArg e)
+    {
+        if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.OnExitRunnerTile)
+        {
+            if (e.tileCount >= sequence[sequenceIndex].atLeastNumTiles)
+            {
+                InvokeASAction(sequence[sequenceIndex]);
+                sequenceIndex += 1;
+                CheckSequence();
+            }
+        }
+    }
+
     private void OnPuzzleComplete(object sender, System.EventArgs e)
     {
-        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnPuzzleComplete)
+        if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.OnPuzzleComplete)
         {
             InvokeASAction(sequence[sequenceIndex]);
             sequenceIndex += 1;
@@ -88,7 +103,7 @@ public class ActionSequence : MonoBehaviour
 
     private void OnDialogueComplete(object sender, System.EventArgs e)
     {
-        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnDialogueComplete)
+        if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.OnDialogueComplete)
         {
             InvokeASAction(sequence[sequenceIndex]);
             sequenceIndex += 1;

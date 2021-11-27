@@ -10,6 +10,7 @@ public class ASAction
     {
         None,
         Delay,
+        OnExitRunnerTile,
         OnPuzzleComplete,
         OnDialogueComplete,
     }
@@ -19,8 +20,11 @@ public class ASAction
 
     public Trigger trigger;
 
-    [Header("Delay")]
+    [Header("On Delay")]
     public float delayDuration;
+
+    [Header("On Runner")]
+    public float atLeastNumTiles;
 
     [Header("Dialogue")]
     public DialogueManager.DialogueParameters dialogueParams;

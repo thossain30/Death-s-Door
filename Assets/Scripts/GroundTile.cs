@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class GroundTile : MonoBehaviour
 {
+    public class RunnerTileArg : System.EventArgs
+    {
+        public int tileCount;
+    }
+
+    public static System.EventHandler<RunnerTileArg> onExitTile;
+
     public static int count = 0;
     private int max = 20;
     GroundSpawner ground;
@@ -35,14 +42,24 @@ public class GroundTile : MonoBehaviour
         } else
         {
             ground.spawnEndTile();
-            count = 0;
+            //count = 0;
+            count++;
         }
         Destroy(gameObject, 1);
         if (ob != null)
         {
             Destroy(ob);
         }
+
+        OnExitTile();
     }
+
+    private void OnExitTile()
+    {
+        print(count);
+        onExitTile?.Invoke(this, new RunnerTileArg { tileCount = count });
+    }
+
     public void spawnObstacle()
     {
         //index for whether obstacle spawns left, middle or right
