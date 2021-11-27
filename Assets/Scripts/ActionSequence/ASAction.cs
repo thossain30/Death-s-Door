@@ -10,6 +10,7 @@ public class ASAction
     {
         None,
         Delay,
+        OffSpawn,
         OnPuzzleComplete,
         OnDialogueComplete,
     }

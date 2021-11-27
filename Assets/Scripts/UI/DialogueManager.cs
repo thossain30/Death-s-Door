@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         //Debug.Log(IsDialogueOpen() + " " + PauseMenu.IsUIOpen() + " " + Input.GetKeyDown(KeyCode.Tab));
-        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("Fire1")))
+        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("Fire2")))
         {
             AdvanceDialogue();
         }
@@ -68,7 +68,10 @@ public class DialogueManager : MonoBehaviour
 
     private void EnableDialogue(System.Action callback=null)
     {
+        Debug.Log("active?: " + dialoguePanel.activeInHierarchy);
         dialoguePanel.SetActive(true);
+        Debug.Log("active again?: " + dialoguePanel.activeInHierarchy);
+        Debug.Log("I am active now: " + gameObject.activeInHierarchy);
         isDialogueOpen = true;
         fadeAnimator.StartFadeIn(callback);
     }
@@ -157,5 +160,9 @@ public class DialogueManager : MonoBehaviour
         isTypingComplete = true;
 
         descText.text = currentParameters.desc;
+    }
+    public void debuglogdialogue(DialogueParameters param)
+    {
+        Debug.Log(param.desc);
     }
 }
