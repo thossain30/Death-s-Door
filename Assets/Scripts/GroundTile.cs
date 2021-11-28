@@ -12,7 +12,7 @@ public class GroundTile : MonoBehaviour
     public static System.EventHandler<RunnerTileArg> onExitTile;
 
     public static int count = 0;
-    private int max = 20;
+    private int max = 60;
     GroundSpawner ground;
     //bool which will change when player collects artifact
     public static bool complete = false;
@@ -56,7 +56,7 @@ public class GroundTile : MonoBehaviour
 
     private void OnExitTile()
     {
-        print(count);
+        print("tilecount: " + count);
         onExitTile?.Invoke(this, new RunnerTileArg { tileCount = count });
     }
 
