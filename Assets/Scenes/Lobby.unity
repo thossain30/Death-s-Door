@@ -823,13 +823,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604244890}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.22549048, y: -0.0024468398, z: 0.0005670416, w: 0.97424215}
 =======
   m_LocalRotation: {x: 0.22548833, y: -0.0014690446, z: 0.00034084203, w: 0.9742447}
->>>>>>> Stashed changes
-=======
-  m_LocalRotation: {x: 0.22548804, y: -0.002520139, z: 0.00058412337, w: 0.97424257}
 >>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -7240,13 +7236,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954225772}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.21046935, y: -0.00000005720621, z: 0.00000009441423, w: 0.97760046}
 =======
   m_LocalRotation: {x: 0.21046957, y: -0.000000057232192, z: 0.000000094433155, w: 0.9776004}
->>>>>>> Stashed changes
-=======
-  m_LocalRotation: {x: 0.21046951, y: -0.000000057232707, z: 0.000000094433524, w: 0.97760046}
 >>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -7401,7 +7393,6 @@ MonoBehaviour:
   sequence:
   - trigger: 0
     delayDuration: 0
-    atLeastNumTiles: 0
     dialogueParams:
       name: 
       desc: 
@@ -7426,7 +7417,6 @@ MonoBehaviour:
         m_Calls: []
   - trigger: 1
     delayDuration: 0.25
-    atLeastNumTiles: 0
     dialogueParams:
       name: Reaper
       desc: Could you hurry it up though? I got things to do.
@@ -7450,18 +7440,11 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - trigger: 4
-<<<<<<< Updated upstream
     delayDuration: 0.25
     dialogueParams:
       name: Reaper
       desc: "Hm? You\u2019re scared of a single door? Pathetic. Well, go ahead and
         try these smaller doors then"
-=======
-    delayDuration: 0
-    atLeastNumTiles: 0
-    dialogueParams:
-      name: Reaper
-      desc: 'Remember: use WASD to move around and the mouse to rotate your view.'
       image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
@@ -7482,48 +7465,11 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - trigger: 4
-    delayDuration: 0
-    atLeastNumTiles: 0
-    dialogueParams:
-      name: Reaper
-      desc: Finally, you can use Shift to turn intangible during these trials. However,
-        you choose to use this is up to you.
->>>>>>> Stashed changes
-      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
-    onTrigger:
-      m_PersistentCalls:
-        m_Calls: []
-    onTriggerDialogue:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 802087268}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - trigger: 4
-<<<<<<< Updated upstream
     delayDuration: 0.25
     dialogueParams:
       name: ???
       desc: (W-w-wait, where am I? Actually WHO am I?)
       image: {fileID: 21300000, guid: f258490c51edbb94599429a41a192201, type: 3}
-=======
-    delayDuration: 0
-    atLeastNumTiles: 0
-    dialogueParams:
-      name: ???
-      desc: (W-w-wait, where am I? Actually WHO am I? And what is it about these
-        trials?)
-      image: {fileID: 21300000, guid: 796761411c054f047808278a784180c5, type: 3}
->>>>>>> Stashed changes
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
