@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     public static System.EventHandler<System.EventArgs> onDialogueComplete;
 
 
-    private static bool isDialogueOpen;
+    public static bool isDialogueOpen;
     private DialogueParameters currentParameters;
 
     public float typeDelay;
