@@ -7,7 +7,7 @@ public class Intangibility : MonoBehaviour
 {
     
     public GameObject character;
-    public float trans = 0.5f;
+    public float trans = 30f;
     float normal = 1f;
 
     [Header("Intangibility Stamina")]
@@ -95,7 +95,7 @@ public class Intangibility : MonoBehaviour
     void ChangeAlpha(Material mat, float alphaVal)
     {
         Color oldColor = mat.color;
-        Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
+        Color newColor = new Color(alphaVal, alphaVal, oldColor.b, oldColor.a);
         mat.SetColor("_Color", newColor);
     }
 }

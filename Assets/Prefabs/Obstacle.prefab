@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bd00046f542cd43bbd94b3850fe3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 9078012028377036302, guid: b89d1617dc18cd14ea6c77998edcaeb5, type: 3}
+  player: {fileID: 7540632371262399568, guid: b89d1617dc18cd14ea6c77998edcaeb5, type: 3}
 --- !u!65 &492265223047191083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110,6 +110,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 289672098d5b89041bbc10e0dc701fab, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 289672098d5b89041bbc10e0dc701fab, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 873c848be91e7df409ee117fffceb780, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 289672098d5b89041bbc10e0dc701fab, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b50f2e91d60dbd84081f1f6995c403de, type: 2}
     - target: {fileID: 919132149155446097, guid: 289672098d5b89041bbc10e0dc701fab, type: 3}
       propertyPath: m_Name
       value: bush3

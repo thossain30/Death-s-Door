@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class GroundTile : MonoBehaviour
 {
+    public class RunnerTileArg : System.EventArgs
+    {
+        public int tileCount;
+    }
+
+    public static System.EventHandler<RunnerTileArg> onExitTile;
+
     public static int count = 0;
     private int max = 20;
     GroundSpawner ground;
@@ -12,6 +19,7 @@ public class GroundTile : MonoBehaviour
     //bool which will determine when endTile will spawn
     public static bool end;
     public GameObject obstaclePrefab;
+    public GameObject intaRegen;
     GameObject ob;
     // Start is called before the first frame update
     private void Start()
@@ -35,24 +43,37 @@ public class GroundTile : MonoBehaviour
         } else
         {
             ground.spawnEndTile();
-            count = 0;
+            //count = 0;
+            count++;
         }
         Destroy(gameObject, 1);
         if (ob != null)
         {
             Destroy(ob);
         }
+
+        OnExitTile();
     }
+
+    private void OnExitTile()
+    {
+        print(count);
+        onExitTile?.Invoke(this, new RunnerTileArg { tileCount = count });
+    }
+
     public void spawnObstacle()
     {
         //index for whether obstacle spawns left, middle or right
         int obstacleSpawnIndex = Random.Range(2, 5);
         //basically a bool for whether an obstacle spawns or not
-        int spawnPerhaps = Random.Range(0, 3);
+        int spawnPerhaps = Random.Range(0, 5);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-        if (spawnPerhaps >= 1)
+        if (spawnPerhaps >= 2)
         {
-             ob = Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity);
+            ob = Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity);
+        } else if(spawnPerhaps == 1)//Spawn Regen for Intangibility
+        {
+            ob = Instantiate(intaRegen, spawnPoint.position, Quaternion.identity);
         }
     }
 }

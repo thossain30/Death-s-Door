@@ -24,7 +24,7 @@ public class ActionSequence : MonoBehaviour
     private void OnDisable()
     {
         T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
-        DialogueManager.onDialogueComplete += OnDialogueComplete;
+        DialogueManager.onDialogueComplete -= OnDialogueComplete;
     }
 
     void Update()

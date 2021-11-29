@@ -13,6 +13,8 @@ public class UI_T3DisplayManager : MonoBehaviour
     [Header("Display Parameters")]
     public Color correctColor;
 
+    public bool shouldFollowPlayer;
+
     public float rotationDelay;
 
     private Coroutine orderedCoroutine;
@@ -34,10 +36,13 @@ public class UI_T3DisplayManager : MonoBehaviour
 
     private void Update()
     {
-        Vector3 playerPos = player.transform.position - transform.position;
-        float newRotation = 270 - (Mathf.Atan2(playerPos.z, playerPos.x) * Mathf.Rad2Deg);
-        //Debug.Log(newRotation);
-        StartCoroutine(SetRotation(newRotation, rotationDelay));
+        if (shouldFollowPlayer)
+        {
+            Vector3 playerPos = player.transform.position - transform.position;
+            float newRotation = 270 - (Mathf.Atan2(playerPos.z, playerPos.x) * Mathf.Rad2Deg);
+            //Debug.Log(newRotation);
+            StartCoroutine(SetRotation(newRotation, rotationDelay));
+        }
     }
 
     private IEnumerator SetRotation(float rotation, float delay)
