@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoneCollector : MonoBehaviour
 {
 
-    public int bonesCollected = 0;
+    public static int bonesCollected = 0;
     public float radius = 2;
     public Transform player;
 
