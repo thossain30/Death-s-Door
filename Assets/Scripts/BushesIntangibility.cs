@@ -5,16 +5,12 @@ using UnityEngine;
 public class BushesIntangibility : MonoBehaviour
 {
     [Header("Objects")]
-    public GameObject wall;
-    public GameObject player;
     //makes it so that you can only go intangible and pass after reaching checkpoint
     public Material[] materials;
     Color oldColor = new Color();
     Color oldoldColor = new Color();
     [Header("Opacity Values")]
     public float BlueTintValue = 1f;
-    public float transparency = 0.5f;
-    bool IntaOn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,27 +21,24 @@ public class BushesIntangibility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool IntaOn = player.GetComponent<Intangibility>().IntaOn;
-    
-        if (IntaOn)
+        if (Input.GetButtonDown("Intangibility"))
         {
-            Debug.Log("Pressed");
-            ChangeAlpha(wall.GetComponent<MeshRenderer>().materials[0], transparency, BlueTintValue);//Make wall transparent
-            ChangeAlpha(wall.GetComponent<MeshRenderer>().materials[1], transparency, BlueTintValue);//Make wall transparent
+            ChangeAlpha(materials[0], BlueTintValue);//Make wall transparent
+            ChangeAlpha(materials[1], BlueTintValue);//Make wall transparent
         }
-        else
+        else if(Input.GetButtonUp("Intangibility"))
         {
-            ChangeAlpha(wall.GetComponent<MeshRenderer>().materials[0], 255f, oldColor.b);//Make wall transparent
-            ChangeAlpha(wall.GetComponent<MeshRenderer>().materials[1], 255f ,oldoldColor.b);//Make wall transparent
+            ChangeAlpha(materials[0], oldColor.b);//Make wall transparent
+            ChangeAlpha(materials[1], oldoldColor.b);//Make wall transparent
         }
  
     }
 
     //Change opacity of wall
-    void ChangeAlpha(Material mat, float alphaVal, float blueVal)
+    void ChangeAlpha(Material mat, float blueVal)
     {
         Color oldColor = mat.color;
-        Color newColor = new Color(oldColor.r, oldColor.g, blueVal, alphaVal);
+        Color newColor = new Color(oldColor.r, oldColor.g, blueVal, oldColor.a);
         mat.SetColor("_Color", newColor);
     }
 }
