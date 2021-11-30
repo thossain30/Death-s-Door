@@ -24,7 +24,7 @@ public class mazefloor : MonoBehaviour
     {
         if (complete)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Lobby");
         }
     }
 

@@ -16,6 +16,7 @@ public class ActionSequence : MonoBehaviour
     private void OnEnable()
     {
         GroundTile.onExitTile += OnExitRunnerTile;
+        T1artifact.onConclusion += onConclusion;
         T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
     }
@@ -23,6 +24,7 @@ public class ActionSequence : MonoBehaviour
     private void OnDisable()
     {
         GroundTile.onExitTile -= OnExitRunnerTile;
+        GroundTile.onExitTile -= onConclusion;
         T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
         DialogueManager.onDialogueComplete -= OnDialogueComplete;
@@ -83,6 +85,15 @@ public class ActionSequence : MonoBehaviour
             }
         }
     }
+    private void onConclusion(object sender, System.EventArgs e)
+    {
+        if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.onConclusion)
+        {
+            InvokeASAction(sequence[sequenceIndex]);
+            sequenceIndex += 1;
+            CheckSequence();
+        }
+    }
 
     private void OnPuzzleComplete(object sender, System.EventArgs e)
     {
@@ -107,7 +118,7 @@ public class ActionSequence : MonoBehaviour
     }
     public void CompleteTrial()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Lobby");
     }
     public void DebugLogString(string s)
     {

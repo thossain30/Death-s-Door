@@ -12,6 +12,7 @@ public class ASAction
         Delay,
         OnExitRunnerTile,
         OnPuzzleComplete,
+        onConclusion,
         OnDialogueComplete,
     }
     [System.Serializable]
