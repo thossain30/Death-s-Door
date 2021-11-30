@@ -14,6 +14,7 @@ public class ASAction
         OnPuzzleComplete,
         onConclusion,
         OnDialogueComplete,
+        onEnterSpawn,
     }
     [System.Serializable]
     public class DialogueEvent : UnityEvent<DialogueManager.DialogueParameters> { }

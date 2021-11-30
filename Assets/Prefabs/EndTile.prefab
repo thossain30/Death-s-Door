@@ -124,7 +124,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4699450945174153817}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8956440670618561913
 MonoBehaviour:
@@ -140,6 +140,133 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - trigger: 4
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: (Mom, can we get a dog? That one was actually really cute)
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8621830688611752264}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Mother
+      desc: Oh, alright. But you have to promise to take good care of it!
+      image: {fileID: 21300000, guid: a595dd102407c824ba00c68bfd48dfdd, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8621830688611752264}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: (Yay, I have a new friend!)
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8621830688611752264}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: That was...quite an eventful day... I remember it all now. Those were
+        the good old days.
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8621830688611752264}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Reaper
+      desc: "This is what you choose to revisit? I mean the dog is cute and all,
+        but I don\u2019t really get it."
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8621830688611752264}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
@@ -603,6 +730,7 @@ Transform:
   - {fileID: 7671133041466372596}
   - {fileID: 8461262812024360021}
   - {fileID: 9168108780329074719}
+  - {fileID: 8621830688611752267}
   - {fileID: 7798292433719619315}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1511,6 +1639,123 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Press 'E' to collect
+--- !u!1001 &105443733916175789
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4699450945174153817}
+    m_Modifications:
+    - target: {fileID: 8561476829576074266, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_Name
+      value: DialogueCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074471, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+--- !u!224 &8621830688611752267 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+  m_PrefabInstance: {fileID: 105443733916175789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8621830688611752264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8561476829576074469, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+  m_PrefabInstance: {fileID: 105443733916175789}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a22f680d517e44a9c226d200cffcde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &696300321956785733
 PrefabInstance:
   m_ObjectHideFlags: 0

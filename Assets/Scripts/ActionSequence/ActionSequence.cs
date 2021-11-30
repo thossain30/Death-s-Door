@@ -16,6 +16,7 @@ public class ActionSequence : MonoBehaviour
     private void OnEnable()
     {
         GroundTile.onExitTile += OnExitRunnerTile;
+        spawnTile.enterSpawn += onEnterSpawn;
         T1artifact.onConclusion += onConclusion;
         T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
@@ -25,6 +26,7 @@ public class ActionSequence : MonoBehaviour
     {
         GroundTile.onExitTile -= OnExitRunnerTile;
         GroundTile.onExitTile -= onConclusion;
+        spawnTile.enterSpawn -= onEnterSpawn;
         T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
         DialogueManager.onDialogueComplete -= OnDialogueComplete;
@@ -94,11 +96,20 @@ public class ActionSequence : MonoBehaviour
             CheckSequence();
         }
     }
+    private void onEnterSpawn(object sender, System.EventArgs e)
+    {
+        if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.onEnterSpawn)
+        {
+            InvokeASAction(sequence[sequenceIndex]);
+            sequenceIndex += 1;
+            CheckSequence();
+        }
+    }
 
     private void OnPuzzleComplete(object sender, System.EventArgs e)
     {
         if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnPuzzleComplete)
-            if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.OnPuzzleComplete)
+            if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.onEnterSpawn)
             {
                 InvokeASAction(sequence[sequenceIndex]);
                 sequenceIndex += 1;

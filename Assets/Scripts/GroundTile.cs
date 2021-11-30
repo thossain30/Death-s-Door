@@ -38,28 +38,32 @@ public class GroundTile : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Destroy(gameObject, 1);
-        //if (ob != null)
-        //{
-            Destroy(ob);
-        //}
+        Destroy(ob);
         if (!end)
         {
-            if (GroundTile.count < 30)
+            if (GroundTile.count < 50)
             {
                 ground.spawnTile(true, false);
+                Debug.Log("less than 50");
             }
-            if (GroundTile.count >= 30)
+            if (GroundTile.count >= 50)
             {
                 ground.spawnTile(true, true);
+                Debug.Log("more than 50");
             }
-            count++;
+            Debug.Log(count);
         }
-        else
+        if (end)
         {
             ground.spawnEndTile();
+            Obstacle[] Obstacles = GameObject.FindObjectsOfType<Obstacle>();
+            foreach (Obstacle ob in Obstacles)
+            {
+                ob.Despawn();
+            }
             count = 0;
-            count++;
         }
+        count++;
         OnExitTile();
     }
 

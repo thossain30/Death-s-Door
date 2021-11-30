@@ -16,10 +16,10 @@ public class ASManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GroundTile.complete)
-        {
-            sequences[0].SetActive(false);
-            canv.SetActive(false);
-        }
+        //if (GroundTile.complete)
+        //{
+        //    sequences[0].SetActive(false);
+        //    canv.SetActive(false);
+        //}
     }
 }

@@ -1179,7 +1179,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604244890}
-  m_LocalRotation: {x: 0.22549011, y: -0.002268379, z: 0.0005258558, w: 0.9742427}
+  m_LocalRotation: {x: 0.22548985, y: -0.0022738252, z: 0.0005271168, w: 0.97424275}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7144,7 +7144,6 @@ MonoBehaviour:
   compText: {fileID: 1453130424}
   DoorLight: {fileID: 1732457844}
   otherText: {fileID: 806561504}
-  nextToDoor: 0
 --- !u!65 &1310883215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8526,7 +8525,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954225772}
-  m_LocalRotation: {x: 0.21046944, y: -0.000000057233297, z: 0.00000009443394, w: 0.97760046}
+  m_LocalRotation: {x: 0.21046929, y: -0.000000057233457, z: 0.00000009443404, w: 0.9776005}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8726,12 +8725,12 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 4
+  - trigger: 5
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
       name: Reaper
-      desc: 'Remember: Use the WASD to move around and move your mouse to rotate
+      desc: 'Remember: Use the WASD keys to move around and move your mouse to change
         your view.'
       image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
@@ -8752,13 +8751,14 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 4
+  - trigger: 5
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
       name: Reaper
-      desc: Finally, you can use shift to turn intangible during these trials. However,
-        you use it is up to you and may come in handy down the line.
+      desc: Finally, you can use shift or left control to turn intangible during
+        these trials. However, you use it is up to you and may come in handy down
+        the line.
       image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
@@ -8778,7 +8778,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 4
+  - trigger: 5
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:

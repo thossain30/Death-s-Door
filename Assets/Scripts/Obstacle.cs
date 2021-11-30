@@ -12,6 +12,10 @@ public class Obstacle : MonoBehaviour
     {
         movement = GameObject.FindObjectOfType<RunnerMovement>();
     }
+    public void Despawn()
+    {
+        Destroy(this);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
