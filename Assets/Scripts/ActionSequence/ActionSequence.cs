@@ -69,8 +69,8 @@ public class ActionSequence : MonoBehaviour
         yield return new WaitForSeconds(delay);
         InvokeASAction(sequence[sequenceIndex]);
         sequenceIndex += 1;
-        CheckSequence();
         delayedAction = null;
+        CheckSequence();
     }
 
     private void OnExitRunnerTile(object sender, GroundTile.RunnerTileArg e)
