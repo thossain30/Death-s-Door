@@ -15,6 +15,7 @@ public class ASAction
         onConclusion,
         OnDialogueComplete,
         onEnterSpawn,
+        OnCheckpoint,
     }
     [System.Serializable]
     public class DialogueEvent : UnityEvent<DialogueManager.DialogueParameters> { }

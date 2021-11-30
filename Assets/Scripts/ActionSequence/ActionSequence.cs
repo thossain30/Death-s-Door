@@ -108,13 +108,13 @@ public class ActionSequence : MonoBehaviour
 
     private void OnPuzzleComplete(object sender, System.EventArgs e)
     {
-        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnPuzzleComplete)
-            if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.onEnterSpawn)
-            {
-                InvokeASAction(sequence[sequenceIndex]);
-                sequenceIndex += 1;
-                CheckSequence();
-            }
+        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnPuzzleComplete) 
+        {
+            Debug.Log("Puzzle finished!");
+            InvokeASAction(sequence[sequenceIndex]);
+            sequenceIndex += 1;
+            CheckSequence();
+        }
     }
 
     private void OnDialogueComplete(object sender, System.EventArgs e)

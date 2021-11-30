@@ -41,17 +41,16 @@ public class GroundTile : MonoBehaviour
         Destroy(ob);
         if (!end)
         {
-            if (GroundTile.count < 50)
+            if (count < 50)
             {
                 ground.spawnTile(true, false);
                 Debug.Log("less than 50");
             }
-            if (GroundTile.count >= 50)
+            if (count >= 50)
             {
                 ground.spawnTile(true, true);
                 Debug.Log("more than 50");
             }
-            Debug.Log(count);
         }
         if (end)
         {
