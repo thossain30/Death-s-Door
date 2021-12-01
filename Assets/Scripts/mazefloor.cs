@@ -21,10 +21,7 @@ public class mazefloor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (complete)
-        {
-            SceneManager.LoadScene("Lobby");
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)

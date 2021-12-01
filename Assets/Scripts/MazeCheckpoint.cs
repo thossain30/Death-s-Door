@@ -26,10 +26,6 @@ public class MazeCheckpoint : MonoBehaviour
             passed = true;
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("Left trigger");
-    }
 
     public void TriggerDialogue()
     {
