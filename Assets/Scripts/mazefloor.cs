@@ -13,7 +13,6 @@ public class mazefloor : MonoBehaviour
     void Start()
     {
         partSys = transform.GetChild(0).gameObject;
-        Debug.Log(partSys);
         partSys.SetActive(false);
         artifact.SetActive(false);
         text.SetActive(false);

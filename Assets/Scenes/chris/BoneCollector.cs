@@ -25,7 +25,6 @@ public class BoneCollector : MonoBehaviour
         {
             Destroy(gameObject);
             bonesCollected++;
-            Debug.Log("numBones: " + bonesCollected);
         }
     }
 }

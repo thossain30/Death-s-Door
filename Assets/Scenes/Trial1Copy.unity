@@ -2153,7 +2153,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804293471}
-  m_LocalRotation: {x: 0.16931029, y: -0.000001760896, z: 0.00000038346897, w: 0.9855628}
+  m_LocalRotation: {x: 0.16931057, y: -0.0000017608959, z: 0.0000003834651, w: 0.98556274}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2494,7 +2494,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931871916}
-  m_LocalRotation: {x: 0.1831401, y: -0.00090849097, z: 0.00016945016, w: 0.98308647}
+  m_LocalRotation: {x: 0.18314011, y: -0.0024388158, z: 0.00045453876, w: 0.9830837}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2724,7 +2724,7 @@ GameObject:
   - component: {fileID: 1041497634}
   - component: {fileID: 1041497633}
   m_Layer: 0
-  m_Name: ActionSequence
+  m_Name: T1ActionSequence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,7 +2898,7 @@ MonoBehaviour:
           m_CallState: 2
   - trigger: 2
     delayDuration: 0.25
-    atLeastNumTiles: 190
+    atLeastNumTiles: 50
     dialogueParams:
       name: ???
       desc: "(He\u2019s so fast! Waaaaah!)"
@@ -2977,7 +2977,7 @@ MonoBehaviour:
     dialogueParams:
       name: Reaper
       desc: I see you are remembering someone who was important to you. I don't really
-        get it but you should check out those bones. They seem interesting
+        get it but you should check out those bones. They seem interesting.
       image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
@@ -2998,11 +2998,11 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - trigger: 6
-    delayDuration: 0.25
+    delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
       name: ???
-      desc: Oh, this ones actually pretty friendly! I like dogs!
+      desc: (Oh, this ones actually pretty friendly! I like dogs!)
       image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
     onTrigger:
       m_PersistentCalls:
@@ -3023,11 +3023,11 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - trigger: 5
-    delayDuration: 0.25
+    delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
       name: Mother
-      desc: (Are you OK? Are you hurt?)
+      desc: Are you OK? Are you hurt?
       image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
     onTrigger:
       m_PersistentCalls:
@@ -3048,12 +3048,63 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - trigger: 5
-    delayDuration: 0.25
+    delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
       name: Owners
       desc: "Oh sorry about that, he\u2019s very playful and gets excited very easily"
-      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+      image: {fileID: 21300000, guid: a595dd102407c824ba00c68bfd48dfdd, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1435650167}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0.25
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Reaper
+      desc: "This is what you choose to revisit? I mean the dog is cute and all,
+        but I don\u2019t really get it."
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1435650167}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0.25
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Reaper
+      desc: But anyways, congratulations on reaching me. Now take your prize.
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []

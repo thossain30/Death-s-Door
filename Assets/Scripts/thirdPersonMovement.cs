@@ -28,7 +28,7 @@ public class thirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Is dialogue active?: " + DialogueManager.IsDialogueOpen());
+        //Debug.Log("Is dialogue active?: " + DialogueManager.IsDialogueOpen());
         if (spawn.onSpawn && !DialogueManager.IsDialogueOpen())
         {
             canMove();
@@ -44,6 +44,7 @@ public class thirdPersonMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+        Vector2 horvir = new Vector2(horizontal, vertical);
 
         //controls logic for walking
         if (direction.magnitude >= 0.1f)
@@ -51,6 +52,8 @@ public class thirdPersonMovement : MonoBehaviour
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            //Debug.Log("vertical dir: " + direction.z);
+            //Debug.Log("angle: " + angle);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);

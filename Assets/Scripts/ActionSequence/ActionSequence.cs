@@ -18,6 +18,7 @@ public class ActionSequence : MonoBehaviour
         GroundTile.onExitTile += OnExitRunnerTile;
         spawnTile.enterSpawn += onEnterSpawn;
         T1artifact.onConclusion += onConclusion;
+        MazeCheckpoint.onCheckpoint += onCheckpoint;
         T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
     }
@@ -25,10 +26,10 @@ public class ActionSequence : MonoBehaviour
     private void OnDisable()
     {
         GroundTile.onExitTile -= OnExitRunnerTile;
-        GroundTile.onExitTile -= onConclusion;
         spawnTile.enterSpawn -= onEnterSpawn;
+        T1artifact.onConclusion -= onConclusion;
+        MazeCheckpoint.onCheckpoint -= onCheckpoint;
         T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
-        DialogueManager.onDialogueComplete += OnDialogueComplete;
         DialogueManager.onDialogueComplete -= OnDialogueComplete;
     }
 
@@ -105,6 +106,15 @@ public class ActionSequence : MonoBehaviour
             CheckSequence();
         }
     }
+    private void onCheckpoint(object sender, System.EventArgs e)
+    {
+        if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.OnCheckpoint)
+        {
+            InvokeASAction(sequence[sequenceIndex]);
+            sequenceIndex += 1;
+            CheckSequence();
+        }
+    }
 
     private void OnPuzzleComplete(object sender, System.EventArgs e)
     {
@@ -119,13 +129,12 @@ public class ActionSequence : MonoBehaviour
 
     private void OnDialogueComplete(object sender, System.EventArgs e)
     {
-        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnDialogueComplete)
-            if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.OnDialogueComplete)
-            {
-                InvokeASAction(sequence[sequenceIndex]);
-                sequenceIndex += 1;
-                CheckSequence();
-            }
+        if (sequenceIndex < sequence.Count && sequence[sequenceIndex].trigger == ASAction.Trigger.OnDialogueComplete)
+        {
+            InvokeASAction(sequence[sequenceIndex]);
+            sequenceIndex += 1;
+            CheckSequence();
+        }
     }
     public void CompleteTrial()
     {

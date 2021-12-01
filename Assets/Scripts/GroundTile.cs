@@ -32,38 +32,38 @@ public class GroundTile : MonoBehaviour
         if (BoneCollector.bonesCollected > max)
         {
             end = true;
-            Debug.Log("End? " + end);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        Destroy(gameObject, 1);
-        Destroy(ob);
-        if (!end)
+        if (other.gameObject.tag == "Player")
         {
-            if (count < 50)
+            Destroy(gameObject, 1);
+            Destroy(ob);
+            if (!end)
             {
-                ground.spawnTile(true, false);
-                Debug.Log("less than 50");
+                if (count < 10)
+                {
+                    ground.spawnTile(true, false);
+                }
+                if (count >= 10)
+                {
+                    ground.spawnTile(true, true);
+                }
             }
-            if (count >= 50)
+            if (end)
             {
-                ground.spawnTile(true, true);
-                Debug.Log("more than 50");
+                ground.spawnEndTile();
+                Obstacle[] Obstacles = GameObject.FindObjectsOfType<Obstacle>();
+                foreach (Obstacle ob in Obstacles)
+                {
+                    ob.Despawn();
+                }
+                count = 0;
             }
+            count++;
+            OnExitTile();
         }
-        if (end)
-        {
-            ground.spawnEndTile();
-            Obstacle[] Obstacles = GameObject.FindObjectsOfType<Obstacle>();
-            foreach (Obstacle ob in Obstacles)
-            {
-                ob.Despawn();
-            }
-            count = 0;
-        }
-        count++;
-        OnExitTile();
     }
 
     private void OnExitTile()
