@@ -43,7 +43,7 @@ public class ActionSequence : MonoBehaviour
     {
         if (sequenceIndex >= sequence.Count)
         {
-            Debug.Log("Sequence complete!");
+            //Debug.Log("Sequence complete!");
             return;
         }
         switch (sequence[sequenceIndex].trigger)

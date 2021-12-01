@@ -86,4 +86,11 @@ public class PauseMenu : MonoBehaviour
     {
         //VolumeSlider.value = AudioManager.GetSFXVolume();
     }
+    public void PlayGame()
+    {
+        GroundTile.complete = false;
+        mazefloor.complete = false;
+        T3ButtonPuzzleManager.complete = false;
+        SceneManager.LoadScene("Lobby");
+    }
 }

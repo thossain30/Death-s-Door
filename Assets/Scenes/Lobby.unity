@@ -918,9 +918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3930e77303a5c1c4a815b77505b85134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sequences:
-  - {fileID: 2085936360}
-  canv: {fileID: 1932508112}
 --- !u!4 &482516998
 Transform:
   m_ObjectHideFlags: 0
@@ -1179,7 +1176,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604244890}
-  m_LocalRotation: {x: 0.22548942, y: -0.0024203137, z: 0.00056102086, w: 0.9742425}
+  m_LocalRotation: {x: 0.22548613, y: -0.0016870695, z: 0.00039130417, w: 0.9742449}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1510,6 +1507,10 @@ PrefabInstance:
     - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561476829576074471, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c712abaf9889351428cfa37789895a4b, type: 3}
@@ -8363,7 +8364,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1932508116
 RectTransform:
@@ -8525,7 +8526,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954225772}
-  m_LocalRotation: {x: 0.21046929, y: -0.00000005723346, z: 0.00000009443404, w: 0.97760046}
+  m_LocalRotation: {x: 0.21046944, y: -0.00000005723353, z: 0.000000094434114, w: 0.97760046}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
