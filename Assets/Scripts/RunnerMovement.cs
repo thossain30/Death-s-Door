@@ -56,14 +56,18 @@ public class RunnerMovement : MonoBehaviour
         {
             speed += 1 * Time.deltaTime;
         }
-
+        if (GroundTile.complete)
+        {
+            SceneManager.LoadScene(0);
+            return;
+        }
     }
     //This should eventually spawn the player to the last checkpoint (or spawn) instead of Lobby!
     public void Die() {
         alive = false;
         GroundTile.count = 0;
         //restarts game
-        SceneManager.LoadScene("Trial1Copy");
+        SceneManager.LoadScene(0);
         //SceneManager.GetActiveScene().name
     }
 }

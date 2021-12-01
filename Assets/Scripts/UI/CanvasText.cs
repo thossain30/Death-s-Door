@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 //controls opening canvas in each scene
 public class CanvasText : MonoBehaviour
@@ -41,9 +40,5 @@ public class CanvasText : MonoBehaviour
     public static bool IsUIOpen()
     {
         return isPaused;
-    }
-    public void CompleteTrial()
-    {
-        SceneManager.LoadScene("Lobby");
     }
 }

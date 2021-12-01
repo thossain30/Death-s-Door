@@ -5,8 +5,7 @@ using UnityEngine;
 public class ASManager : MonoBehaviour
 {
     private int seqIndex;
-    public List<GameObject> sequences = new List<GameObject>();
-    public GameObject canv;
+    public List<ActionSequence> sequences = new List<ActionSequence>();
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +17,7 @@ public class ASManager : MonoBehaviour
     {
         if (GroundTile.complete)
         {
-            sequences[0].SetActive(false);
-            canv.SetActive(false);
+            sequences[0].enabled = false;
         }
     }
 }

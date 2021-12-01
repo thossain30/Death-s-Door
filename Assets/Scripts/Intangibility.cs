@@ -69,6 +69,11 @@ public class Intangibility : MonoBehaviour
                 intaStamina += intaRegen * Time.deltaTime;
                 UpdateStamina();
             }
+            //If intangibility goes above max
+            if(intaStamina > maxIntaStamina)
+            {
+                intaStamina = maxIntaStamina;
+            }
          //Using Intangibility
         }else if(IntaOn)
         {
