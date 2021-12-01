@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class T1artifact : MonoBehaviour
 {
     public GameObject text;
+    public static System.EventHandler<System.EventArgs> onConclusion;
     // Update is called once per frame
     void Start()
     {
@@ -19,7 +18,7 @@ public class T1artifact : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 GroundTile.complete = true;
-                Debug.Log(GroundTile.complete);
+                OnConclusion();
             }
         }
     }
@@ -30,5 +29,10 @@ public class T1artifact : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         text.SetActive(false);
+    }
+    private void OnConclusion()
+    {
+        //print(count);
+        onConclusion?.Invoke(this, new System.EventArgs());
     }
 }

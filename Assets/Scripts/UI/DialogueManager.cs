@@ -68,10 +68,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EnableDialogue(System.Action callback=null)
     {
-        Debug.Log("active?: " + dialoguePanel.activeInHierarchy);
         dialoguePanel.SetActive(true);
-        Debug.Log("active again?: " + dialoguePanel.activeInHierarchy);
-        Debug.Log("I am active now: " + gameObject.activeInHierarchy);
         isDialogueOpen = true;
         fadeAnimator.StartFadeIn(callback);
     }

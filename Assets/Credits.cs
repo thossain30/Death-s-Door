@@ -18,7 +18,10 @@ public class Credits : MonoBehaviour
     }
     public void ReturnToMenu()
     {
-        Debug.Log("Loading menu...");
         SceneManager.LoadScene("MainMenu");
+    }
+    public void GoToCredits()
+    {
+        SceneManager.LoadScene("credits");
     }
 }

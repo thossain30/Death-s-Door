@@ -43,6 +43,66 @@ Transform:
   m_Father: {fileID: 4290542048690286152}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2329866533337415094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2942745474431391273}
+  m_Layer: 0
+  m_Name: CoinSpawnRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2942745474431391273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2329866533337415094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.999, y: 0.5, z: -1.16}
+  m_LocalScale: {x: 0.16666667, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4290542048690286152}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2754380804798879860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7766401064824522560}
+  m_Layer: 0
+  m_Name: CoinSpawnMid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7766401064824522560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754380804798879860}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.217, y: 0.5, z: -2.13}
+  m_LocalScale: {x: 0.16666667, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4290542048690286152}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3374494170257737467
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +172,9 @@ Transform:
   - {fileID: 6519795984539621513}
   - {fileID: 8714904846676525566}
   - {fileID: 1843682048862974279}
+  - {fileID: 1796263670052398089}
+  - {fileID: 7766401064824522560}
+  - {fileID: 2942745474431391273}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -189,8 +252,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.824784, y: 5.3335304, z: 8.165863}
+  m_Center: {x: -0.049601793, y: 2.6667652, z: -0.14773273}
 --- !u!114 &3506893216740813262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 874850196155748604, guid: 82c8e37acb07262428b2654a2941730f, type: 3}
-  intaRegen: {fileID: 8522670438580950181, guid: 8a4a45e17f8a34b4a8fb180ad5d20f51, type: 3}
+  bonePrefab: {fileID: 5242736393326586438, guid: e2b822df5ade4834585abbf3bfac0579, type: 3}
 --- !u!1 &4290542049068898574
 GameObject:
   m_ObjectHideFlags: 0
@@ -5069,6 +5132,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4290542048690286152}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7378234427984305850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796263670052398089}
+  m_Layer: 0
+  m_Name: CoinSpawnLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1796263670052398089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378234427984305850}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.67, y: 0.5, z: -2.98}
+  m_LocalScale: {x: 0.16666667, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4290542048690286152}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3274589328483236733
 BoxCollider:
