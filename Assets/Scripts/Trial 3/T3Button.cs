@@ -13,6 +13,8 @@ public class T3Button : MonoBehaviour
     private Color currentColor;
     private MeshRenderer meshRenderer;
 
+    public AudioSource buttonClickSource;
+
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -43,6 +45,7 @@ public class T3Button : MonoBehaviour
         if (other.CompareTag("Player")) // && not intangible
         {
             T3ButtonPuzzleManager.AddButtonToSequence(this);
+            buttonClickSource.Play();
         }
     }
 }
