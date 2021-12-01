@@ -5,6 +5,7 @@ using UnityEngine;
 public class T3ButtonPuzzleManager : MonoBehaviour
 {
     public static System.EventHandler<System.EventArgs> onPuzzleComplete;
+    public static System.EventHandler<System.EventArgs> onPuzzleFail;
 
     public State state;
 
@@ -336,6 +337,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
         if (!CheckLegalState() && IntaOn == false)
         {
             // if illegal, set red
+            onPuzzleFail?.Invoke(this, new System.EventArgs());
 
             SetState(State.resetting);
 
@@ -357,7 +359,8 @@ public class T3ButtonPuzzleManager : MonoBehaviour
                 }
                 else
                 {
-                    onPuzzleComplete.Invoke(this, new System.EventArgs());
+
+                    onPuzzleComplete?.Invoke(this, new System.EventArgs());
                     SetState(State.party);
                 }
             }
