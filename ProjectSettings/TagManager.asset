@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Dog
+  - Bone
   layers:
   - Default
   - TransparentFX
