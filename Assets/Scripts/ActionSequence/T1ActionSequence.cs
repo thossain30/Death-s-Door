@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ActionSequence : MonoBehaviour
+public class T1ActionSequence : MonoBehaviour
 {
     public List<ASAction> sequence = new List<ASAction>();
+    public spawnTile spawn;
     private int sequenceIndex;
 
     private Coroutine delayedAction;
@@ -17,19 +18,19 @@ public class ActionSequence : MonoBehaviour
 
     private void OnEnable()
     {
-        T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
+        spawnTile.onRunning += OnRunning;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
     }
 
     private void OnDisable()
     {
-        T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
+        spawnTile.onRunning -= OnRunning;
         DialogueManager.onDialogueComplete -= OnDialogueComplete;
     }
 
     void Update()
     {
-        
+
     }
 
     private void CheckSequence()
@@ -54,6 +55,11 @@ public class ActionSequence : MonoBehaviour
                     delayedAction = StartCoroutine(InvokeEventAfterDelay(delay));
                 }
                 break;
+            case ASAction.Trigger.OffSpawn:
+                InvokeASAction(sequence[sequenceIndex]);
+                sequenceIndex += 1;
+                CheckSequence();
+                break;
         }
     }
 
@@ -76,20 +82,21 @@ public class ActionSequence : MonoBehaviour
         delayedAction = null;
     }
 
-    private void OnPuzzleComplete(object sender, System.EventArgs e)
+
+    private void OnDialogueComplete(object sender, System.EventArgs e)
     {
-        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnPuzzleComplete)
+        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnDialogueComplete)
         {
             InvokeASAction(sequence[sequenceIndex]);
             sequenceIndex += 1;
             CheckSequence();
         }
     }
-
-    private void OnDialogueComplete(object sender, System.EventArgs e)
+    private void OnRunning(object sender, System.EventArgs e)
     {
-        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OnDialogueComplete)
+        if (sequence[sequenceIndex].trigger == ASAction.Trigger.OffSpawn)
         {
+            Debug.Log("No longer on spawn!");
             InvokeASAction(sequence[sequenceIndex]);
             sequenceIndex += 1;
             CheckSequence();

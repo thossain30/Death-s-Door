@@ -919,8 +919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sequences:
-  - {fileID: 2085936360}
-  canv: {fileID: 1932508112}
+  - {fileID: 2085936361}
 --- !u!4 &482516998
 Transform:
   m_ObjectHideFlags: 0
@@ -931,10 +930,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 707.57153, y: 271.8896, z: -23.8208}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2085936362}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &520669394
 GameObject:
@@ -1179,7 +1177,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604244890}
-  m_LocalRotation: {x: 0.22548942, y: -0.0024203137, z: 0.00056102086, w: 0.9742425}
+  m_LocalRotation: {x: 0.22549048, y: -0.002263845, z: 0.00052480807, w: 0.97424257}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1437,7 +1435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1524,85 +1522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a22f680d517e44a9c226d200cffcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &806561504
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 806561505}
-  - component: {fileID: 806561507}
-  - component: {fileID: 806561506}
-  m_Layer: 5
-  m_Name: OtherTrials
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &806561505
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806561504}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1476225380}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 68.9}
-  m_SizeDelta: {x: 314.6, y: 102.4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &806561506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806561504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 420846b8cb0ea884ab2bc0574b66fc9b, type: 3}
-    m_FontSize: 34
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "You must complete \nanother trial first"
---- !u!222 &806561507
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806561504}
-  m_CullTransparentMesh: 1
 --- !u!1 &826910754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2dfe4586efd07cb469317583b549ce60, type: 3}
@@ -1658,7 +1577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1068312551}
   compText: {fileID: 1453130424}
-  otherText: {fileID: 806561504}
   DoorLight: {fileID: 1617297016}
   nextToDoor: 0
 --- !u!65 &966443434
@@ -7143,7 +7061,7 @@ MonoBehaviour:
   text: {fileID: 1068312551}
   compText: {fileID: 1453130424}
   DoorLight: {fileID: 1732457844}
-  otherText: {fileID: 806561504}
+  nextToDoor: 0
 --- !u!65 &1310883215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7403,7 +7321,6 @@ RectTransform:
   m_Children:
   - {fileID: 1068312552}
   - {fileID: 1453130425}
-  - {fileID: 806561505}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8525,7 +8442,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954225772}
-  m_LocalRotation: {x: 0.21046929, y: -0.00000005723346, z: 0.00000009443404, w: 0.97760046}
+  m_LocalRotation: {x: 0.21046957, y: -0.00000005723305, z: 0.00000009443378, w: 0.97760046}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8725,12 +8642,12 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 5
+  - trigger: 4
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
       name: Reaper
-      desc: 'Remember: Use the WASD keys to move around and move your mouse to change
+      desc: 'Remember: Use the WASD to move around and move your mouse to rotate
         your view.'
       image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
@@ -8751,14 +8668,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 5
+  - trigger: 4
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
       name: Reaper
-      desc: Finally, you can use shift or left control to turn intangible during
-        these trials. However, you use it is up to you and may come in handy down
-        the line.
+      desc: Finally, you can use shift to turn intangible during these trials. However,
+        you use it is up to you and may come in handy down the line.
       image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
@@ -8778,7 +8694,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - trigger: 5
+  - trigger: 4
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
@@ -8811,12 +8727,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085936360}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -227.37152, y: -76.79959, z: 23.8208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 480.2, y: 195.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 482516998}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2107202769
 GameObject:
@@ -9015,10 +8931,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1668490417}
-    - target: {fileID: 8540060345087680378, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 8540060344395641684}
     - target: {fileID: 8540060345087680379, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -9065,8 +8977,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
---- !u!95 &8540060344395641684 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8540060345087680383, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
-  m_PrefabInstance: {fileID: 8540060344395641683}
-  m_PrefabAsset: {fileID: 0}

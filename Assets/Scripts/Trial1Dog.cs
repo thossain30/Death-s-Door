@@ -8,7 +8,6 @@ public class Trial1Dog : MonoBehaviour
     public RunnerMovement movement;
     public Animator dogAnim;
     public Transform player;
-    public AudioSource source;
     public float MoveSpeed;
     private bool playerpos;
     // Start is called before the first frame update
@@ -21,15 +20,10 @@ public class Trial1Dog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int barkPerhaps = Random.Range(0, 4);
         if (!spawn.onSpawn)
         {
             dogAnim.SetBool("atSpawn", false);
             transform.rotation = Quaternion.identity;
-            if (GroundTile.count % 10 == 0)
-            {
-                source.Play();
-            }
             if (playerpos)
             {
                 transform.position += new Vector3(player.position.x - transform.position.x, 0, 3f);

@@ -5,7 +5,6 @@ using UnityEngine;
 public class T2artifact : MonoBehaviour
 {
     public GameObject text;
-    public static System.EventHandler<System.EventArgs> onConclusion;
     // Update is called once per frame
     void Start()
     {
@@ -19,7 +18,6 @@ public class T2artifact : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                OnConclusion();
                 mazefloor.complete = true;
             }
         }
@@ -31,9 +29,5 @@ public class T2artifact : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         text.SetActive(false);
-    }
-    public void OnConclusion()
-    {
-        onConclusion?.Invoke(this, new System.EventArgs());
     }
 }

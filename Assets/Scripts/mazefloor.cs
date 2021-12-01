@@ -13,6 +13,7 @@ public class mazefloor : MonoBehaviour
     void Start()
     {
         partSys = transform.GetChild(0).gameObject;
+        Debug.Log(partSys);
         partSys.SetActive(false);
         artifact.SetActive(false);
         text.SetActive(false);
@@ -21,7 +22,10 @@ public class mazefloor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (complete)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

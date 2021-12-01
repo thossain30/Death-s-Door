@@ -9,21 +9,19 @@ public class Door3Script : MonoBehaviour
     public GameObject compText;
     [SerializeField]
     public GameObject DoorLight;
-    public GameObject otherText;
     Light rad;
-    private bool nextToDoor = false;
+    public bool nextToDoor = false;
     // Start is called before the first frame update
     void Start()
     {
         rad = DoorLight.GetComponent<Light>();
         text.SetActive(false);
         compText.SetActive(false);
-        otherText.SetActive(false);
         rad.enabled = false;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !T3ButtonPuzzleManager.complete && mazefloor.complete)
+        if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !T3ButtonPuzzleManager.complete)
         {
             SceneManager.LoadScene("Trial3");
         }
@@ -37,11 +35,6 @@ public class Door3Script : MonoBehaviour
         {
             text.SetActive(true);
             nextToDoor = true;
-            if (!mazefloor.complete)
-            {
-                otherText.SetActive(true);
-                text.SetActive(false);
-            }
             if (T3ButtonPuzzleManager.complete)
             {
                 compText.SetActive(true);
@@ -56,7 +49,6 @@ public class Door3Script : MonoBehaviour
             text.SetActive(false);
             nextToDoor = false;
             compText.SetActive(false);
-            otherText.SetActive(false);
         }
     }
 }

@@ -7,7 +7,6 @@ public class Door2Script : MonoBehaviour
 {
     public GameObject text;
     public GameObject compText;
-    public GameObject otherText;
     [SerializeField]
     public GameObject DoorLight;
     Light rad;
@@ -18,12 +17,11 @@ public class Door2Script : MonoBehaviour
         rad = DoorLight.GetComponent<Light>();
         text.SetActive(false);
         compText.SetActive(false);
-        otherText.SetActive(false);
         rad.enabled = false;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !mazefloor.complete && GroundTile.complete)
+        if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !mazefloor.complete)
         {
             SceneManager.LoadScene("Trial2");
         }
@@ -37,11 +35,6 @@ public class Door2Script : MonoBehaviour
         {
             text.SetActive(true);
             nextToDoor = true;
-            if (!GroundTile.complete)
-            {
-                otherText.SetActive(true);
-                text.SetActive(false);
-            }
             if (mazefloor.complete) {
                 compText.SetActive(true);
                 text.SetActive(false);
@@ -55,7 +48,6 @@ public class Door2Script : MonoBehaviour
             text.SetActive(false);
             nextToDoor = false;
             compText.SetActive(false);
-            otherText.SetActive(false);
         }
     }
 }

@@ -19,25 +19,21 @@ public class GroundSpawner : MonoBehaviour
         {
             if (i < 5)
             {
-                spawnTile(false, false);
+                spawnTile(false);
             }
             else
             {
-                spawnTile(true, false);
+                spawnTile(true);
             }
         }
     }
-    public void spawnTile(bool spawnObs, bool spawnCoin)
+    public void spawnTile(bool spawnObs)
     {
         GameObject temp2 = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
         nextSpawnPoint = temp2.transform.GetChild(0).transform.position;
         if (spawnObs)
         {
             temp2.GetComponent<GroundTile>().spawnObstacle();
-        }
-        if (spawnCoin)
-        {
-            temp2.GetComponent<GroundTile>().spawnCoin();
         }
     }
     public void spawnEndTile()

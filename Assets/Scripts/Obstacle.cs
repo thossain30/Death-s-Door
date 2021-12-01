@@ -12,10 +12,6 @@ public class Obstacle : MonoBehaviour
     {
         movement = GameObject.FindObjectOfType<RunnerMovement>();
     }
-    public void Despawn()
-    {
-        Destroy(this);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,7 +23,7 @@ public class Obstacle : MonoBehaviour
             //Slow player if he hits obstacle without intangibility
             if (!IntaOn)
             {
-                movement.speed -= 1f;
+                movement.speed -= 1.75f;
             //Dont slow him if he has it on
             } else if(IntaOn)
             {
