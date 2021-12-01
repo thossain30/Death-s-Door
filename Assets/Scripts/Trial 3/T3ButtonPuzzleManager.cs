@@ -39,6 +39,9 @@ public class T3ButtonPuzzleManager : MonoBehaviour
 
     private static T3ButtonPuzzleManager _instance;
 
+    [HideInInspector] public bool IntaOn = false;
+    public GameObject player;
+
     public enum State
     {
         inactive,
@@ -58,6 +61,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
 
     private void Update()
     {
+        IntaOn = player.GetComponent<Intangibility>().IntaOn;
         if (isCrunching)
         {
             crunchBoard.SetScore(crunchTasksComplete);
@@ -318,7 +322,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
             return;
         }
 
-        if (!canRepeat && currentSequence.Contains(button.buttonID))
+        if (!canRepeat && currentSequence.Contains(button.buttonID) && IntaOn == false)
         {
             // Stepped on already pressed button
             SetState(State.resetting);
@@ -330,7 +334,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
 
         currentSequence.Add(button.buttonID);
 
-        if (!CheckLegalState())
+        if (!CheckLegalState() && IntaOn == false)
         {
             // if illegal, set red
             onPuzzleFail?.Invoke(this, new System.EventArgs());
@@ -341,7 +345,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
 
             return;
         }
-        else
+        else if(CheckLegalState())
         {
             button.SetColor(correctColor);
 
@@ -355,6 +359,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
                 }
                 else
                 {
+
                     onPuzzleComplete?.Invoke(this, new System.EventArgs());
                     SetState(State.party);
                 }
