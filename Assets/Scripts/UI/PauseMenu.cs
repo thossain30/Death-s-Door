@@ -91,6 +91,7 @@ public class PauseMenu : MonoBehaviour
         GroundTile.complete = false;
         mazefloor.complete = false;
         T3ButtonPuzzleManager.complete = false;
+        isPaused = false;
         SceneManager.LoadScene("Lobby");
     }
 }

@@ -1616,7 +1616,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188724458}
-  m_LocalRotation: {x: 0.026296165, y: -0.0022880328, z: -0.0071183685, w: 0.9996263}
+  m_LocalRotation: {x: 0.026291223, y: -0.0015411847, z: -0.007138011, w: 0.99962765}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8610,7 +8610,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583909529}
-  m_LocalRotation: {x: 0.031868655, y: 0.0012785723, z: -0.041671824, w: 0.9986222}
+  m_LocalRotation: {x: 0.031868774, y: 0.0012785671, z: -0.041671824, w: 0.9986222}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14725,7 +14725,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912665274}
-  m_LocalRotation: {x: 0.03189422, y: -0.0000006078056, z: 0.000000019395351, w: 0.9994913}
+  m_LocalRotation: {x: 0.031894624, y: -0.00000060780553, z: 0.000000019395598, w: 0.9994913}
   m_LocalPosition: {x: 4.250005, y: 1.8579926, z: -8.010617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -37253,7 +37253,7 @@ PrefabInstance:
       objectReference: {fileID: 912665277}
     - target: {fileID: 8540060345087680378, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
       propertyPath: speed
-      value: 16
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8540060345087680379, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
       propertyPath: m_RootOrder
@@ -51067,7 +51067,7 @@ MonoBehaviour:
       name: Mother
       desc: "Oh ok. You\u2019re lucky this boy was nice enough to help you. Do you
         know what you would\u2019ve done if you hadn\u2019t met him?"
-      image: {fileID: 21300000, guid: 95cebf29df4c11546a8527b6093ac38f, type: 3}
+      image: {fileID: 21300000, guid: a595dd102407c824ba00c68bfd48dfdd, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -51094,7 +51094,7 @@ MonoBehaviour:
       desc: "Next time, use a payphone to call me if your phone isn\u2019t working.
         Since you\u2019re here, why not join us for dinner? It\u2019s the least I
         can do to repay you."
-      image: {fileID: 21300000, guid: 95cebf29df4c11546a8527b6093ac38f, type: 3}
+      image: {fileID: 21300000, guid: a595dd102407c824ba00c68bfd48dfdd, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []

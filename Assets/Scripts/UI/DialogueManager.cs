@@ -50,7 +50,6 @@ public class DialogueManager : MonoBehaviour
         {
             AdvanceDialogue();
         }
-        Debug.Log("Pause Menu open?: " + PauseMenu.IsUIOpen());
     }
 
 
