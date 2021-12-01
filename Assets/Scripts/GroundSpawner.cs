@@ -42,7 +42,7 @@ public class GroundSpawner : MonoBehaviour
     }
     public void spawnEndTile()
     {
-        //here to ensure only one endtile gets spawned (probably a better way tbh)
+        //here to ensure only one endtile gets spawned (probably a better way to do this tbh)
         if (endTileCount <= 1)
         {
             Instantiate(endTile, nextSpawnPoint, Quaternion.identity);

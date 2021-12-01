@@ -12,7 +12,7 @@ public class GroundTile : MonoBehaviour
     public static System.EventHandler<RunnerTileArg> onExitTile;
 
     public static int count = 0;
-    private int max = 4;
+    private int max = 20;
     GroundSpawner ground;
     //bool which will change when player collects artifact
     public static bool complete = false;
@@ -42,11 +42,11 @@ public class GroundTile : MonoBehaviour
             Destroy(ob);
             if (!end)
             {
-                if (count < 10)
+                if (count < 50)
                 {
                     ground.spawnTile(true, false);
                 }
-                if (count >= 10)
+                if (count >= 50)
                 {
                     ground.spawnTile(true, true);
                 }
