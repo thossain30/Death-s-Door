@@ -477,10 +477,9 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: Hello intern, welcome to Gregory Tech. Game Developers! We hope you're
-        as excited to get started as we are!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      name: ???
+      desc: "First day as project lead...hope I don\u2019t mess this up."
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -503,11 +502,62 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: Let's start with your first programming ticket! You see that large floating
+      name: ???
+      desc: "I\u2019ve got my plan for this project, as long as I follow this perfectly,
+        everything should go well."
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Boss
+      desc: 'Welcome to the job, fresh meat. '
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Boss
+      desc: Let's start with your first programming ticket. You see that large floating
         panel over there? Press the buttons in the same order they appear to complete
-        the task!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+        the task. And don't mess up.
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -555,9 +605,9 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: Great work, keep it up! Press 'R' to quickly start your next task!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      name: Boss
+      desc: Yup, just like that. Press 'R' to quickly start your next task!
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -605,6 +655,84 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
+      name: ???
+      desc: "Damn, I\u2019m so behind on everything. Why did the boss even assign
+        me to this? Everyone can see I\u2019m not fit to lead."
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: "Ethan\u2019s game was so cool...Can we even finish our game in time?
+        What\u2019s the point?"
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: Ugh, I guess all I can do now is persist and see where this game ends
+        up...
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
       name: 
       desc: 
       image: {fileID: 0}
@@ -630,10 +758,10 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: On second thought intern... why don't we try something else? These tickets
+      name: Boss
+      desc: On second thought new guy... why don't we try something else? These tickets
         aren't being completed as well as we'd hoped...
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -656,11 +784,11 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: Let's try out some work on the art team! Now, you can just fill in the
+      name: Boss
+      desc: Let's try out some work on the art team. Now, you can just fill in the
         shapes in any order you want. Just make sure that the assets you create match
-        the pattern of what we need!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+        the pattern of what we need, 'kay?
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -746,6 +874,84 @@ MonoBehaviour:
           m_MethodName: SetPuzzle
           m_Mode: 2
           m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 5d506d3d03243064ca069b9bbb3e968c, type: 2}
+            m_ObjectArgumentAssemblyTypeName: T3Puzzle, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 'Ok now we have a new task: Just fill the shape, in
+              any order'
+            m_BoolArgument: 0
+          m_CallState: 2
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - trigger: 3
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: Everyone on my team has been working so hard. Maybe we can finish this
+        on time.
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: "No, we WILL finish this on time. We\u2019re at the home stretch. Let\u2019s
+        finish strong."
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: 
+      desc: 
+      image: {fileID: 0}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1380883245}
+          m_TargetAssemblyTypeName: T3ButtonPuzzleManager, Assembly-CSharp
+          m_MethodName: SetPuzzle
+          m_Mode: 2
+          m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: 981a82e5dfccb1742a87d1b2d8e861e9, type: 2}
             m_ObjectArgumentAssemblyTypeName: T3Puzzle, Assembly-CSharp
             m_IntArgument: 0
@@ -761,10 +967,10 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: Okay intern, we're gonna be really busy really soon, so try to keep up.
+      name: Boss
+      desc: Okay buddie, we're gonna be really busy really soon, so try to keep up.
         You see that timer over there?
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -811,10 +1017,10 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: 'We''re gonna enter that infamous time... I know you aren''t the best
-        equipped but try to get as much done as you can. '
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      name: Boss
+      desc: We're gonna enter that infamous time... you've done so much, I'm sure
+        you'll get through.
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -837,9 +1043,9 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: And try to not mess anything up this time.
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      name: Boss
+      desc: It's time... to C R U N C H.
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -887,9 +1093,9 @@ MonoBehaviour:
     delayDuration: 30
     atLeastNumTiles: 0
     dialogueParams:
-      name: Yoon
-      desc: Hurry up intern, we don't have time for dilly dallying!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      name: Boss
+      desc: Hurry up pal, we don't have time for dilly dallying!
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -912,9 +1118,9 @@ MonoBehaviour:
     delayDuration: 20
     atLeastNumTiles: 0
     dialogueParams:
-      name: Yoon
+      name: Boss
       desc: Come on, do better little bird!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -937,10 +1143,77 @@ MonoBehaviour:
     delayDuration: 10
     atLeastNumTiles: 0
     dialogueParams:
-      name: Yoon
-      desc: Don't worry, Greg covered you for your work. I'm looking forward to your
-        improved performance next time.
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      name: Boss
+      desc: "Phew, great work. You exceeded my expectations considering it\u2019s
+        your first time leading a project. Maybe we'll put you on to lead our next
+        game ;)"
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: 
+      desc: 
+      image: {fileID: 0}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - trigger: 1
+    delayDuration: 2
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Death
+      desc: "Artwork comes and goes, only a few pieces are unearthed and preserved
+        in history. Why did you try so hard to finish something which will be forgotten?
+        Oh that it might make an impact on someone\u2019s life? That\u2019s amusing."
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2039238074}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Death
+      desc: "There is nothing new under the sun. People come and people go. Can anyone
+        point at something and say, \u2018this is something truly new?"
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -2640,7 +2913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554544057}
-  m_LocalRotation: {x: 0.025989262, y: -0.0017711199, z: -0.007130655, w: 0.9996353}
+  m_LocalRotation: {x: 0.025987653, y: -0.0017701342, z: -0.0071307165, w: 0.9996353}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4442,7 +4715,7 @@ RectTransform:
   - {fileID: 1642875687}
   - {fileID: 1278756084}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9953,7 +10226,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081351904}
-  m_LocalRotation: {x: 0.031208152, y: 0.0012058085, z: -0.0416779, w: 0.9986429}
+  m_LocalRotation: {x: 0.031208187, y: 0.0012057851, z: -0.0416779, w: 0.9986429}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11409,6 +11682,230 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877e08e0191d6c947994d22a8f111767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1313852679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1313852681}
+  - component: {fileID: 1313852680}
+  - component: {fileID: 1313852682}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1313852680
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313852679}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 43172c162753dbd43ad9dac9706bc878, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1313852681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313852679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1313852682
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313852679}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5e1fe31470c665d4daa125eae844f16b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1330240227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11778,7 +12275,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 23de7412c9c52224fa3a428fe9c3ca59, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11874,7 +12371,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 56e806ed6151b5a4d9a7bf0b90726000, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15334,7 +15831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2080988797
 PrefabInstance:
