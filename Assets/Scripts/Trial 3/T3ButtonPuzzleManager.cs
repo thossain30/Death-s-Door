@@ -30,6 +30,9 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     public UI_T3DisplayManager displayManager;
     public UI_T3CrunchBoard crunchBoard;
 
+    public AudioSource correctSoundSource;
+    public AudioSource incorrectSoundSource;
+
     // colors set in editor
     public Color inactiveColor;
     public Color activeBlankColor;
@@ -334,6 +337,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
         {
             // if illegal, set red
             onPuzzleFail?.Invoke(this, new System.EventArgs());
+            incorrectSoundSource.Play();
 
             SetState(State.resetting);
 
@@ -356,6 +360,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
                 else
                 {
                     onPuzzleComplete?.Invoke(this, new System.EventArgs());
+                    correctSoundSource.Play();
                     SetState(State.party);
                 }
             }
