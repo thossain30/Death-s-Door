@@ -321,7 +321,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
             return;
         }
 
-        if (!canRepeat && currentSequence.Contains(button.buttonID))
+        if (!canRepeat && currentSequence.Contains(button.buttonID) && IntaOn == false)
         {
             // Stepped on already pressed button
             SetState(State.resetting);
