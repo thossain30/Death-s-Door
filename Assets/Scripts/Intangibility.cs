@@ -7,7 +7,7 @@ public class Intangibility : MonoBehaviour
 {
     
     public GameObject character;
-    public float blue = 30f;
+    public float trans = 30f;
     float normal = 1f;
 
     [Header("Intangibility Stamina")]
@@ -36,22 +36,17 @@ public class Intangibility : MonoBehaviour
         if (Input.GetButtonDown("Intangibility") && CanInta)
         {
             IntaOn = true;
-            ChangeAlpha(character.GetComponent<Renderer>().material, blue);//Make player blue
+            ChangeAlpha(character.GetComponent<Renderer>().material, trans);//Make player more transparent
         }
         else if(Input.GetButtonUp("Intangibility"))
         {
             IntaOn = false;
-            ChangeAlpha(character.GetComponent<Renderer>().material, normal);//Reset 
+            ChangeAlpha(character.GetComponent<Renderer>().material, normal);//Make player less transparent
         }
-        if (CanInta == false || intaStamina <= 1f)
+        if (CanInta == false)
         {
             IntaOn = false;
-            ChangeAlpha(character.GetComponent<Renderer>().material, normal);//Reset player if he ran out of inta stamina
-        }
-        //Dont let intangibility go overboard
-        if (intaStamina > maxIntaStamina)
-        {
-            intaStamina = maxIntaStamina;
+            ChangeAlpha(character.GetComponent<Renderer>().material, normal);//Make player less transparent
         }
         //Control Intangibility Stamina
         //Not inside intangibility
@@ -100,7 +95,7 @@ public class Intangibility : MonoBehaviour
     void ChangeAlpha(Material mat, float alphaVal)
     {
         Color oldColor = mat.color;
-        Color newColor = new Color(oldColor.r, oldColor.g, alphaVal, oldColor.a);
+        Color newColor = new Color(alphaVal, alphaVal, oldColor.b, oldColor.a);
         mat.SetColor("_Color", newColor);
     }
 }

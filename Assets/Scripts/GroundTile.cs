@@ -20,7 +20,6 @@ public class GroundTile : MonoBehaviour
     public static bool end;
     public GameObject obstaclePrefab;
     public GameObject bonePrefab;
-    public GameObject intaRegenPrefab;
     GameObject ob;
     // Start is called before the first frame update
     private void Start()
@@ -45,11 +44,11 @@ public class GroundTile : MonoBehaviour
             {
                 if (count < 10)
                 {
-                    ground.spawnTile(true, false, false);
+                    ground.spawnTile(true, false);
                 }
                 if (count >= 10)
                 {
-                    ground.spawnTile(true, true, true);
+                    ground.spawnTile(true, true);
                 }
             }
             if (end)
@@ -95,19 +94,6 @@ public class GroundTile : MonoBehaviour
         if (spawnPerhaps >= 1)
         {
             ob = Instantiate(bonePrefab, spawnPoint.position, Quaternion.identity);
-        }
-    }
-    //Respawn intangibility regen pick ups 
-    public void spawnInta()
-    {
-        //index for whether obstacle spawns left, middle or right
-        int obstacleSpawnIndex = Random.Range(7, 10);
-        //basically a bool for whether an obstacle spawns or not
-        int spawnPerhaps = Random.Range(0, 3);
-        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-        if (spawnPerhaps >= 2)
-        {
-            ob = Instantiate(intaRegenPrefab, spawnPoint.position, Quaternion.identity);
         }
     }
 }

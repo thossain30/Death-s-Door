@@ -268,7 +268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 874850196155748604, guid: 82c8e37acb07262428b2654a2941730f, type: 3}
   bonePrefab: {fileID: 5242736393326586438, guid: e2b822df5ade4834585abbf3bfac0579, type: 3}
-  intaRegenPrefab: {fileID: 8522670438580950181, guid: 8a4a45e17f8a34b4a8fb180ad5d20f51, type: 3}
 --- !u!1 &4290542049068898574
 GameObject:
   m_ObjectHideFlags: 0
