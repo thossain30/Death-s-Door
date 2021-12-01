@@ -71,13 +71,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e74ccba9138984db967da3ea64a71f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall: {fileID: 5978811156648455756}
-  player: {fileID: 7540632371262399568, guid: b89d1617dc18cd14ea6c77998edcaeb5, type: 3}
   materials:
   - {fileID: 2100000, guid: b50f2e91d60dbd84081f1f6995c403de, type: 2}
   - {fileID: 2100000, guid: e0cf8c0b171ada6479a8017f78e70724, type: 2}
+  player: {fileID: 4682704840663440535, guid: b89d1617dc18cd14ea6c77998edcaeb5, type: 3}
   BlueTintValue: 1
-  transparency: 0.5
 --- !u!1001 &6789291612223656733
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719fbc622ac06454b9c3ffff4d335c67, type: 3}
+  m_Name: OP_ExpandChevron
+  m_EditorClassIdentifier: 
+  puzzleType: 0
+  orderedPuzzle: 01000000040000000500000010000000110000000200000003000000060000000f000000120000000900000008000000070000000e000000130000000a0000000b0000000c0000000d000000140000001900000018000000170000001600000015000000
+  shapePuzzle: 00000000000000000000000000000000000000000000000000

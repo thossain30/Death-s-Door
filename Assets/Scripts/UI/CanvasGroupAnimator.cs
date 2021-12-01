@@ -24,8 +24,6 @@ public class CanvasGroupAnimator : MonoBehaviour
         fadeCallback?.Invoke();
 
         fadeCallback = callback;
-        Debug.Log(gameObject.activeInHierarchy + " fading in!");
-        Debug.Log("calling back: " + callback);
         fadeCoroutine = StartCoroutine(FadeIn());
     }
 

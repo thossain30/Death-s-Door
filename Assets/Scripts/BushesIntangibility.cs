@@ -23,15 +23,14 @@ public class BushesIntangibility : MonoBehaviour
     {
         if (Input.GetButtonDown("Intangibility"))
         {
-            ChangeAlpha(materials[0], BlueTintValue);//Make wall transparent
-            ChangeAlpha(materials[1], BlueTintValue);//Make wall transparent
+            ChangeAlpha(materials[0], BlueTintValue);//Make wall blue
+            ChangeAlpha(materials[1], BlueTintValue);
         }
         else if(Input.GetButtonUp("Intangibility"))
         {
-            ChangeAlpha(materials[0], oldColor.b);//Make wall transparent
-            ChangeAlpha(materials[1], oldoldColor.b);//Make wall transparent
+            ChangeAlpha(materials[0], oldColor.b);//Reset wall
+            ChangeAlpha(materials[1], oldoldColor.b);
         }
- 
     }
 
     //Change opacity of wall

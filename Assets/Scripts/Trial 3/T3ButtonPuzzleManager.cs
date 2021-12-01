@@ -19,7 +19,15 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     public static bool complete = false;
 
 
+    //private Coroutine crunchCoroutine;
+    public List<T3Puzzle> randomPuzzlePool = new List<T3Puzzle>();
+    private bool isCrunching;
+    private float crunchDeadline;
+    private int crunchTasksComplete;
+
+
     public UI_T3DisplayManager displayManager;
+    public UI_T3CrunchBoard crunchBoard;
 
     // colors set in editor
     public Color inactiveColor;
@@ -36,6 +44,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
         active,
         resetting,
         party,
+        startCrunch,
     }
 
 
@@ -46,8 +55,22 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        if (isCrunching)
+        {
+            crunchBoard.SetScore(crunchTasksComplete);
+            if (Time.time >= crunchDeadline)
+            {
+                SetState(State.inactive);
+            }
+        }
+    }
+
     public void SetState(State s)
     {
+        state = s;
+
         switch (s)
         {
             case State.active:
@@ -86,8 +109,32 @@ public class T3ButtonPuzzleManager : MonoBehaviour
                 //complete = true;
                 break;
 
+            case State.startCrunch:
+
+                //if (crunchCoroutine == null)
+                if (!isCrunching)
+                {
+                    isCrunching = true;
+                    crunchDeadline = Time.time + 60;
+                    crunchTasksComplete = 0;
+
+                    crunchBoard.StartTimer(crunchDeadline);
+
+                    ResetGrid();
+
+                    SetRandomPuzzle();
+                }
+
+                SetState(State.active);
+
+                break;
+
         }
-        state = s;
+    }
+
+    public void SetStateStartCrunch() // for unity events
+    {
+        SetState(State.startCrunch);
     }
 
     public void ResetGrid()
@@ -143,6 +190,17 @@ public class T3ButtonPuzzleManager : MonoBehaviour
 
         displayManager.DisplayPuzzle(puzzle);
     }
+
+    private void SetRandomPuzzle()
+    {
+        int i = Random.Range(0, randomPuzzlePool.Count);
+        while (randomPuzzlePool[i] == currentPuzzle)
+        {
+            i = Random.Range(0, randomPuzzlePool.Count);
+        }
+        SetPuzzle(randomPuzzlePool[i]);
+    }
+
 
     private bool CheckLegalState()
     {
@@ -288,8 +346,16 @@ public class T3ButtonPuzzleManager : MonoBehaviour
             // check if matches goal
             if (CheckGoalState())
             {
-                onPuzzleComplete.Invoke(this, new System.EventArgs());
-                SetState(State.party);
+                if (isCrunching)
+                {
+                    crunchTasksComplete += 1;
+                    SetRandomPuzzle();
+                }
+                else
+                {
+                    onPuzzleComplete.Invoke(this, new System.EventArgs());
+                    SetState(State.party);
+                }
             }
         }
 

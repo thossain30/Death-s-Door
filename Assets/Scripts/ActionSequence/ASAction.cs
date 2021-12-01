@@ -10,18 +10,24 @@ public class ASAction
     {
         None,
         Delay,
-        OffSpawn,
+        OnExitRunnerTile,
         OnPuzzleComplete,
+        onConclusion,
         OnDialogueComplete,
+        onEnterSpawn,
+        OnCheckpoint,
     }
-
     [System.Serializable]
     public class DialogueEvent : UnityEvent<DialogueManager.DialogueParameters> { }
 
     public Trigger trigger;
 
     [Header("Delay")]
+    [Header("On Delay")]
     public float delayDuration;
+
+    [Header("On Runner")]
+    public float atLeastNumTiles;
 
     [Header("Dialogue")]
     public DialogueManager.DialogueParameters dialogueParams;

@@ -5,25 +5,26 @@ using UnityEngine;
 public class BoneCollector : MonoBehaviour
 {
 
-    public int bonesCollected = 0;
-    public float radius = 2;
-    public Transform player;
+    public static int bonesCollected = 0;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponent<Transform>();
+        player = GameObject.FindObjectOfType<RunnerMovement>().gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Collider[] nearby = Physics.OverlapSphere(player.position, radius);
-        foreach (var collider in nearby) {
-            if (collider.tag == "Bone") {
-                Destroy (collider.gameObject);
-                ++bonesCollected;
-            }
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+            bonesCollected++;
         }
     }
 }

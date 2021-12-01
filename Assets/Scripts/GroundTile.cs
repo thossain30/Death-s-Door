@@ -12,14 +12,15 @@ public class GroundTile : MonoBehaviour
     public static System.EventHandler<RunnerTileArg> onExitTile;
 
     public static int count = 0;
-    private int max = 20;
+    private int max = 4;
     GroundSpawner ground;
     //bool which will change when player collects artifact
     public static bool complete = false;
     //bool which will determine when endTile will spawn
     public static bool end;
     public GameObject obstaclePrefab;
-    public GameObject intaRegen;
+    public GameObject bonePrefab;
+    public GameObject intaRegenPrefab;
     GameObject ob;
     // Start is called before the first frame update
     private void Start()
@@ -29,35 +30,46 @@ public class GroundTile : MonoBehaviour
     }
     private void Update()
     {
-        if (count >= max) {
+        if (BoneCollector.bonesCollected > max)
+        {
             end = true;
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
-        if (!end)
+        if (other.gameObject.tag == "Player")
         {
-            ground.spawnTile(true);
-            count++;
-        } else
-        {
-            ground.spawnEndTile();
-            //count = 0;
-            count++;
-        }
-        Destroy(gameObject, 1);
-        if (ob != null)
-        {
+            Destroy(gameObject, 1);
             Destroy(ob);
+            if (!end)
+            {
+                if (count < 10)
+                {
+                    ground.spawnTile(true, false, false);
+                }
+                if (count >= 10)
+                {
+                    ground.spawnTile(true, true, true);
+                }
+            }
+            if (end)
+            {
+                ground.spawnEndTile();
+                Obstacle[] Obstacles = GameObject.FindObjectsOfType<Obstacle>();
+                foreach (Obstacle ob in Obstacles)
+                {
+                    ob.Despawn();
+                }
+                count = 0;
+            }
+            count++;
+            OnExitTile();
         }
-
-        OnExitTile();
     }
 
     private void OnExitTile()
     {
-        print(count);
+        //print(count);
         onExitTile?.Invoke(this, new RunnerTileArg { tileCount = count });
     }
 
@@ -66,14 +78,36 @@ public class GroundTile : MonoBehaviour
         //index for whether obstacle spawns left, middle or right
         int obstacleSpawnIndex = Random.Range(2, 5);
         //basically a bool for whether an obstacle spawns or not
-        int spawnPerhaps = Random.Range(0, 5);
+        int spawnPerhaps = Random.Range(0, 3);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        if (spawnPerhaps >= 1)
+        {
+            ob = Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity);
+        }
+    }
+    public void spawnCoin()
+    {
+        //index for whether obstacle spawns left, middle or right
+        int obstacleSpawnIndex = Random.Range(7, 10);
+        //basically a bool for whether an obstacle spawns or not
+        int spawnPerhaps = Random.Range(0, 3);
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        if (spawnPerhaps >= 1)
+        {
+            ob = Instantiate(bonePrefab, spawnPoint.position, Quaternion.identity);
+        }
+    }
+    //Respawn intangibility regen pick ups 
+    public void spawnInta()
+    {
+        //index for whether obstacle spawns left, middle or right
+        int obstacleSpawnIndex = Random.Range(7, 10);
+        //basically a bool for whether an obstacle spawns or not
+        int spawnPerhaps = Random.Range(0, 3);
         Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
         if (spawnPerhaps >= 2)
         {
-            ob = Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity);
-        } else if(spawnPerhaps == 1)//Spawn Regen for Intangibility
-        {
-            ob = Instantiate(intaRegen, spawnPoint.position, Quaternion.identity);
+            ob = Instantiate(intaRegenPrefab, spawnPoint.position, Quaternion.identity);
         }
     }
 }

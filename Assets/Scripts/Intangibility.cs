@@ -7,7 +7,7 @@ public class Intangibility : MonoBehaviour
 {
     
     public GameObject character;
-    public float trans = 30f;
+    public float blue = 30f;
     float normal = 1f;
 
     [Header("Intangibility Stamina")]
@@ -36,17 +36,22 @@ public class Intangibility : MonoBehaviour
         if (Input.GetButtonDown("Intangibility") && CanInta)
         {
             IntaOn = true;
-            ChangeAlpha(character.GetComponent<Renderer>().material, trans);//Make player more transparent
+            ChangeAlpha(character.GetComponent<Renderer>().material, blue);//Make player blue
         }
         else if(Input.GetButtonUp("Intangibility"))
         {
             IntaOn = false;
-            ChangeAlpha(character.GetComponent<Renderer>().material, normal);//Make player less transparent
+            ChangeAlpha(character.GetComponent<Renderer>().material, normal);//Reset 
         }
-        if (CanInta == false)
+        if (CanInta == false || intaStamina <= 1f)
         {
             IntaOn = false;
-            ChangeAlpha(character.GetComponent<Renderer>().material, normal);//Make player less transparent
+            ChangeAlpha(character.GetComponent<Renderer>().material, normal);//Reset player if he ran out of inta stamina
+        }
+        //Dont let intangibility go overboard
+        if (intaStamina > maxIntaStamina)
+        {
+            intaStamina = maxIntaStamina;
         }
         //Control Intangibility Stamina
         //Not inside intangibility
@@ -68,11 +73,6 @@ public class Intangibility : MonoBehaviour
                 //Regen if less than max
                 intaStamina += intaRegen * Time.deltaTime;
                 UpdateStamina();
-            }
-            //If intangibility goes above max
-            if(intaStamina > maxIntaStamina)
-            {
-                intaStamina = maxIntaStamina;
             }
          //Using Intangibility
         }else if(IntaOn)
@@ -100,7 +100,7 @@ public class Intangibility : MonoBehaviour
     void ChangeAlpha(Material mat, float alphaVal)
     {
         Color oldColor = mat.color;
-        Color newColor = new Color(alphaVal, alphaVal, oldColor.b, oldColor.a);
+        Color newColor = new Color(oldColor.r, oldColor.g, alphaVal, oldColor.a);
         mat.SetColor("_Color", newColor);
     }
 }
