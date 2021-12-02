@@ -82,7 +82,7 @@ public class UI_T3DisplayManager : MonoBehaviour
         {
             orderedSubcoroutine = StartCoroutine(AnimateOrderedPath(puzzle, orderedDelay));
 
-            yield return new WaitForSeconds(orderedDelay * 5);
+            yield return new WaitForSeconds(orderedDelay * 10);
         }
     }
 

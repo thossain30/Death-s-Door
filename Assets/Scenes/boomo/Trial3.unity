@@ -2913,7 +2913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554544057}
-  m_LocalRotation: {x: 0.025987653, y: -0.0017701342, z: -0.0071307165, w: 0.9996353}
+  m_LocalRotation: {x: 0.02599024, y: -0.0017692426, z: -0.007130737, w: 0.9996353}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10226,7 +10226,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081351904}
-  m_LocalRotation: {x: 0.031208187, y: 0.0012057851, z: -0.0416779, w: 0.9986429}
+  m_LocalRotation: {x: 0.031208027, y: 0.0012057913, z: -0.0416779, w: 0.9986429}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13555,8 +13555,8 @@ MonoBehaviour:
   shouldFollowPlayer: 0
   rotationDelay: 0.5
   orderedInitDelay: 0.1
-  orderedDelay: 1
-  pingDuration: 3
+  orderedDelay: 0.75
+  pingDuration: 2
   pingCurve:
     serializedVersion: 2
     m_Curve:
@@ -14293,7 +14293,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672148299}
-  m_LocalRotation: {x: 0.031231405, y: 0, z: 0, w: 0.9995122}
+  m_LocalRotation: {x: 0.031231001, y: 0, z: 0, w: 0.99951226}
   m_LocalPosition: {x: 0, y: 1.98, z: -22.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
