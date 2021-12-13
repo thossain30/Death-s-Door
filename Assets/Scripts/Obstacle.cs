@@ -27,7 +27,7 @@ public class Obstacle : MonoBehaviour
             //Slow player if he hits obstacle without intangibility
             if (!IntaOn)
             {
-                movement.speed -= 1f;
+                movement.speed -= 1.25f;
             //Dont slow him if he has it on
             } else if(IntaOn)
             {
