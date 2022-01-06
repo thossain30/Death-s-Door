@@ -42,11 +42,11 @@ public class GroundTile : MonoBehaviour
             Destroy(ob);
             if (!end)
             {
-                if (count < 50)
+                if (count < 25)
                 {
                     ground.spawnTile(true, false);
                 }
-                if (count >= 50)
+                if (count >= 25)
                 {
                     ground.spawnTile(true, true);
                 }

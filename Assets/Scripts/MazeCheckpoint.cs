@@ -6,22 +6,28 @@ using UnityEngine;
 public class MazeCheckpoint : MonoBehaviour
 {
     public static System.EventHandler<System.EventArgs> onCheckpoint;
-    public GameObject wall;
+    public List<GameObject> walls;
     public bool passed;
     // Start is called before the first frame update
     void Start()
     {
-        wall.GetComponent<MazeWallsIntangibility>().passable = false;
-        passed = false;
+        foreach (GameObject w in walls) {
+            w.GetComponent<MazeWallsIntangibility>().passable = false;
+            passed = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player") 
         {
-            wall.GetComponent<MazeWallsIntangibility>().passable = true;
-            if (!passed) {
-                TriggerDialogue();
+            foreach (GameObject w in walls)
+            {
+                w.GetComponent<MazeWallsIntangibility>().passable = true;
+                if (!passed)
+                {
+                    TriggerDialogue();
+                }
             }
             passed = true;
         }

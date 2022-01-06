@@ -33,6 +33,10 @@ public class thirdPersonMovement : MonoBehaviour
         {
             canMove();
         }
+        else if(DialogueManager.IsDialogueOpen())
+        {
+            anim.SetBool("isWalking", false);
+        }
         else
         {
             transform.rotation = Quaternion.identity;

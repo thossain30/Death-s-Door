@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     private DialogueParameters currentParameters;
 
     public float typeDelay;
+    private float timeSincelastDialogue;
     private bool isTyping;
     private bool isTypingComplete;
     private Coroutine typingCoroutine;
@@ -40,14 +41,16 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
+        timeSincelastDialogue += Time.deltaTime;
         //Debug.Log(IsDialogueOpen() + " " + PauseMenu.IsUIOpen() + " " + Input.GetKeyDown(KeyCode.Tab));
-        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("Fire2")))
+        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("Fire2") || timeSincelastDialogue > 3f))
         {
+            timeSincelastDialogue = 0;
             AdvanceDialogue();
         }
     }

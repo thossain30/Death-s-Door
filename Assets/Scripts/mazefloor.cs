@@ -28,7 +28,10 @@ public class mazefloor : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            partSys.SetActive(true);
+            if (partSys != null)
+            {
+                partSys.SetActive(true);
+            }
             if (transform.gameObject.name == "FinalFloor")
             {
                 artifact.SetActive(true);

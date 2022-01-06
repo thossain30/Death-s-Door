@@ -6,6 +6,7 @@ public class MazeWallsIntangibility : MonoBehaviour
 {
     [Header("Objects")]
     public GameObject wall;
+    private GameObject partSys;
     public GameObject player;
     //makes it so that you can only go intangible and pass after reaching checkpoint
     public bool passable;
@@ -22,6 +23,9 @@ public class MazeWallsIntangibility : MonoBehaviour
     {
         Color oldColor = material.color;
         passable = false;
+        partSys = gameObject.transform.GetChild(0).gameObject;
+        Debug.Log(partSys);
+        partSys.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,6 +34,7 @@ public class MazeWallsIntangibility : MonoBehaviour
         bool IntaOn = player.GetComponent<Intangibility>().IntaOn;
         if (passable)
         {
+            partSys.SetActive(true);
             if (IntaOn)
             {
                 wall.GetComponent<BoxCollider>().enabled = false;//Dissable Collider
