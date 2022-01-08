@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class T3ButtonPuzzleManager : MonoBehaviour
 {
+    private thirdPersonMovement character;
+
     public static System.EventHandler<System.EventArgs> onPuzzleComplete;
     public static System.EventHandler<System.EventArgs> onPuzzleFail;
 
@@ -55,6 +57,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        character = FindObjectOfType<thirdPersonMovement>();
         //SetPuzzle(currentPuzzle);
     }
 
@@ -63,6 +66,8 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     {
         if (isCrunching)
         {
+            //increases player speed when entering crunch state
+            character.speed = 12f;
             crunchBoard.SetScore(crunchTasksComplete);
             if (Time.time >= crunchDeadline)
             {

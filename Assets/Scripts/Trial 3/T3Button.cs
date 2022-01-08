@@ -41,7 +41,6 @@ public class T3Button : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Button pressed!");
         if (other.CompareTag("Player")) // && not intangible
         {
             T3ButtonPuzzleManager.AddButtonToSequence(this);
