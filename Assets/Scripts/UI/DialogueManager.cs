@@ -8,7 +8,6 @@ public class DialogueManager : MonoBehaviour
 {
     public static System.EventHandler<System.EventArgs> onDialogueComplete;
 
-
     private static bool isDialogueOpen;
     private DialogueParameters currentParameters;
 
@@ -48,7 +47,7 @@ public class DialogueManager : MonoBehaviour
     {
         timeSincelastDialogue += Time.deltaTime;
         //Debug.Log(IsDialogueOpen() + " " + PauseMenu.IsUIOpen() + " " + Input.GetKeyDown(KeyCode.Tab));
-        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("Fire2") || timeSincelastDialogue > 3f))
+        if (IsDialogueOpen() && !PauseMenu.IsUIOpen() && (Input.GetKeyDown(KeyCode.Tab) || Input.GetButtonDown("Fire2") || timeSincelastDialogue > 3.5f))
         {
             timeSincelastDialogue = 0;
             AdvanceDialogue();

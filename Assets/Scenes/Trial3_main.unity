@@ -260,7 +260,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54106078}
-  m_LocalRotation: {x: -0.0028229344, y: -0.0000013555754, z: -0.041619994, w: 0.9991296}
+  m_LocalRotation: {x: -0.002822843, y: -0.0000013537997, z: -0.041619994, w: 0.9991296}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -635,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8540060345087680379, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8540060345087680379, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1747,7 +1747,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256096806}
-  m_LocalRotation: {x: -0.008386242, y: -0.0020178915, z: -0.007191702, w: 0.99993694}
+  m_LocalRotation: {x: -0.0083850045, y: -0.0020181027, z: -0.0071919397, w: 0.999937}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2010,7 +2010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8743029490166092557, guid: 1d3bc48af0f6053439b3748a38c037a2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3649,6 +3649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa66e3c0ca5001648b85c8a70b644d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraAnim: {fileID: 1444346555}
   state: 1
   currentSequence: 
   currentPuzzle: {fileID: 11400000, guid: 463da3f3b9e65444e8767bdb2ebce442, type: 2}
@@ -4436,9 +4437,11 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: Great work, keep it up! Press 'R' to quickly start your next task!
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      name: Boss
+      desc: Great work, keep it up! Press 'R' to quickly start the next task! You
+        can also press 'Q' if you're having a hard time seeing the display and press
+        it again to switch back.
+      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -4513,7 +4516,7 @@ MonoBehaviour:
     dialogueParams:
       name: ???
       desc: "(Everything is fine, everything is going well. Surely, one misstep won\u2019t
-        mess it all up)"
+        mess it all up.)"
       image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
     onTrigger:
       m_PersistentCalls:
@@ -4642,10 +4645,10 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: On second thought... why don't we try something else? These tickets aren't
-        being completed as well as we'd hoped...
-      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
+      name: ???
+      desc: "(Damn, I\u2019m so behind on everything. Why did the boss even assign
+        me to this? Everyone can see I\u2019m not fit to lead.)"
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -4668,11 +4671,63 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: Let's try out some work on the art team! Now, you can just fill in the
-        shapes in any order you want. Just make sure that the assets you create match
-        the pattern of what we need!
-      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
+      name: ???
+      desc: "(Austin\u2019s game was so cool...Can we even finish our game in time?
+        What\u2019s the point?)\n"
+      image: {fileID: 0}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1768516585}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Reaper
+      desc: Why not try out some work on the art team? Fill in the shapes in any
+        order you want. Just make sure that the assets you create match the pattern
+        of what you need!
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1768516585}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: I guess I'll continue what past me started. I do hope I finished this
+        game on time.
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -4773,10 +4828,62 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: Okay intern, we're gonna be really busy really soon, so try to keep up.
-        You see that timer over there?
-      image: {fileID: 21300000, guid: aae66643d82932f42850d674c78ecfe3, type: 3}
+      name: ???
+      desc: (Everyone on my team has been working so hard. Maybe we can finish this
+        on time.)
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1768516585}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: ???
+      desc: "No, we WILL finish this on time. We\u2019re at the home stretch. Let\u2019s
+        finish strong!"
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls: []
+    onTriggerDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1768516585}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - trigger: 5
+    delayDuration: 0
+    atLeastNumTiles: 0
+    dialogueParams:
+      name: Reaper
+      desc: Hate to be the bearer of bad news but this is where you get REALLY busy,
+        so try to keep up. You see that timer over there?
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls:
@@ -4823,10 +4930,10 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: 'We''re gonna enter that infamous time... I know you aren''t the best
-        equipped but try to get as much done as you can. '
-      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
+      name: Reaper
+      desc: You aren't the best equipped but try to get as much as you can done although
+        it doesn't really matter much in the long run.
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -4849,9 +4956,10 @@ MonoBehaviour:
     delayDuration: 0
     atLeastNumTiles: 0
     dialogueParams:
-      name: Speaker
-      desc: And try to not mess anything up this time.
-      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
+      name: ???
+      desc: Looks like I'll have to move around faster now. I don't remember much
+        but I at least know this project was very important to me.
+      image: {fileID: 21300000, guid: 6aedab67bda76114aaf0969098044908, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -4899,9 +5007,9 @@ MonoBehaviour:
     delayDuration: 30
     atLeastNumTiles: 0
     dialogueParams:
-      name: Boss
-      desc: Hurry up intern, we don't have time for dilly dallying!
-      image: {fileID: 21300000, guid: 9d28ff00ee4554148b0cc092287f3cf2, type: 3}
+      name: Reaper
+      desc: Time is ticking...
+      image: {fileID: 21300000, guid: 7983f7e9c9929d24ba845ee9db667c35, type: 3}
     onTrigger:
       m_PersistentCalls:
         m_Calls: []
@@ -5531,7 +5639,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973782807}
-  m_LocalRotation: {x: -0.0028207996, y: 0, z: 0, w: 0.99999607}
+  m_LocalRotation: {x: -0.0028203938, y: 0, z: 0, w: 0.99999607}
   m_LocalPosition: {x: 0, y: 1.6, z: -22.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6605,6 +6713,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877e08e0191d6c947994d22a8f111767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1211795853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1211795855}
+  - component: {fileID: 1211795854}
+  m_Layer: 0
+  m_Name: DialCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1211795854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211795853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 9
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+  m_ComponentOwner: {fileID: 1565452897}
+--- !u!4 &1211795855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211795853}
+  m_LocalRotation: {x: 0.041290384, y: -0, z: -0, w: 0.99914724}
+  m_LocalPosition: {x: 0, y: 8.3, z: -31.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1565452897}
+  m_Father: {fileID: 1444346554}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 4.733, y: 0, z: 0}
 --- !u!1001 &1214517158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11983,7 +12149,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 6
   m_LookAt: {fileID: 96797257}
   m_Follow: {fileID: 96797257}
   m_CommonLens: 1
@@ -12040,15 +12206,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377579927}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.6, z: -22.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1866586421}
   - {fileID: 256096808}
   - {fileID: 54106080}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1444346554}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399082974
 GameObject:
@@ -12340,6 +12506,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877e08e0191d6c947994d22a8f111767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1444346552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444346554}
+  - component: {fileID: 1444346553}
+  - component: {fileID: 1444346555}
+  m_Layer: 0
+  m_Name: Cameras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1444346553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444346552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325a6a3050a061e4b8aa51386c30e8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_LookAt: {fileID: 1553690187}
+  m_Follow: {fileID: 1553690187}
+  m_AnimatedTarget: {fileID: 1444346555}
+  m_LayerIndex: 0
+  m_ShowDebugText: 0
+  m_EnableAllChildCameras: 0
+  m_ChildCameras:
+  - {fileID: 1377579929}
+  - {fileID: 1211795854}
+  m_Instructions:
+  - m_FullHash: 1118231599
+    m_VirtualCamera: {fileID: 1377579929}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
+  - m_FullHash: -1914501272
+    m_VirtualCamera: {fileID: 1211795854}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 0.28
+  m_CustomBlends: {fileID: 0}
+  m_ParentHash:
+  - m_Hash: 1118231599
+    m_ParentHash: 756556552
+  - m_Hash: -1914501272
+    m_ParentHash: 756556552
+--- !u!4 &1444346554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444346552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1377579930}
+  - {fileID: 1211795855}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1444346555
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444346552}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a1f579d145d9f6459dfaddb49e596ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1496774651
 GameObject:
   m_ObjectHideFlags: 0
@@ -13015,6 +13278,75 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &1565452896
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565452897}
+  - component: {fileID: 1565452900}
+  - component: {fileID: 1565452898}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1565452897
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565452896}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1211795855}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565452898
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565452896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 10
+  m_HorizontalDamping: 0.5
+  m_VerticalDamping: 0.5
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0.1
+  m_DeadZoneHeight: 0.1
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+--- !u!114 &1565452900
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565452896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1565818485
 GameObject:
   m_ObjectHideFlags: 0
@@ -14131,7 +14463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8561476829576074470, guid: c712abaf9889351428cfa37789895a4b, type: 3}
       propertyPath: m_AnchorMax.x
