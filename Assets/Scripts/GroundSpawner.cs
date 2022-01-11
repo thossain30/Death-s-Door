@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GroundSpawner : MonoBehaviour
 {
+    public GameObject startingTile;
     public GameObject groundTile;
     public GameObject endTile;
     static int endTileCount = 0;
     private bool spawn = false;
-    Vector3 nextSpawnPoint;
+    public Vector3 nextSpawnPoint;
     //number of tiles to spawn ahead of player
     private int length = 10;
     public float timeOffset = 0.4f;
@@ -48,5 +49,6 @@ public class GroundSpawner : MonoBehaviour
             Instantiate(endTile, nextSpawnPoint, Quaternion.identity);
             endTileCount++;
         }
+        nextSpawnPoint = startingTile.transform.position;
     }
 }

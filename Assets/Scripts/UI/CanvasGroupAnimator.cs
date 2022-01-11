@@ -29,6 +29,7 @@ public class CanvasGroupAnimator : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
+        canvasGroup.gameObject.SetActive(true);
         float t = canvasGroup.alpha * fadeDuration;
 
         while (t < fadeDuration)

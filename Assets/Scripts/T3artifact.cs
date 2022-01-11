@@ -5,6 +5,7 @@ using UnityEngine;
 public class T3artifact : MonoBehaviour
 {
     public GameObject text;
+    private thirdPersonMovement player;
     public static System.EventHandler<System.EventArgs> onConclusion;
     // Update is called once per frame
     void Start()
@@ -19,6 +20,7 @@ public class T3artifact : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
+                player.speed = 8f;
                 OnConclusion();
                 T3ButtonPuzzleManager.complete = true;
             }
