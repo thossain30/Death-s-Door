@@ -19,6 +19,7 @@ public class ActionSequence : MonoBehaviour
         spawnTile.enterSpawn += onEnterSpawn;
         T1artifact.onConclusion += onConclusion;
         T2artifact.onConclusion += onConclusion;
+        T3artifact.onConclusion += onConclusion;
         MazeCheckpoint.onCheckpoint += onCheckpoint;
         T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
@@ -30,6 +31,7 @@ public class ActionSequence : MonoBehaviour
         spawnTile.enterSpawn -= onEnterSpawn;
         T1artifact.onConclusion -= onConclusion;
         T2artifact.onConclusion -= onConclusion;
+        T3artifact.onConclusion -= onConclusion;
         MazeCheckpoint.onCheckpoint -= onCheckpoint;
         T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
         DialogueManager.onDialogueComplete -= OnDialogueComplete;

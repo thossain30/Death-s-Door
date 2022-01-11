@@ -67,7 +67,7 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     {
         if (cameraAnim != null)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.C))
             {
                 if (cameraAnim.GetBool("IsOnPlayer") == true)
                 {

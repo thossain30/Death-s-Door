@@ -5,6 +5,7 @@ using UnityEngine;
 public class T3artifact : MonoBehaviour
 {
     public GameObject text;
+    public static System.EventHandler<System.EventArgs> onConclusion;
     // Update is called once per frame
     void Start()
     {
@@ -18,6 +19,7 @@ public class T3artifact : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
+                OnConclusion();
                 T3ButtonPuzzleManager.complete = true;
             }
         }
@@ -29,5 +31,17 @@ public class T3artifact : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         text.SetActive(false);
+    }
+    public void OnConclusion()
+    {
+        onConclusion?.Invoke(this, new System.EventArgs());
+    }
+    public void activate()
+    {
+        this.gameObject.SetActive(true);
+    }
+    public void deactivate()
+    {
+        this.gameObject.SetActive(false);
     }
 }
