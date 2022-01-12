@@ -46,6 +46,36 @@ public class T3ButtonPuzzleManager : MonoBehaviour
     }
 
 
+<<<<<<< Updated upstream
+=======
+    private void Update()
+    {
+        if (cameraAnim != null)
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                if (cameraAnim.GetBool("IsOnPlayer") == true)
+                {
+                    cameraAnim.SetBool("IsOnPlayer", false);
+                } else if (cameraAnim.GetBool("IsOnPlayer") == false)
+                {
+                    cameraAnim.SetBool("IsOnPlayer", true);
+                }
+            }
+        }
+        if (isCrunching)
+        {
+            //increases player speed when entering crunch state
+            character.speed = 11.5f;
+            crunchBoard.SetScore(crunchTasksComplete);
+            if (Time.time >= crunchDeadline)
+            {
+                SetState(State.inactive);
+            }
+        }
+    }
+
+>>>>>>> Stashed changes
     public void SetState(State s)
     {
         switch (s)

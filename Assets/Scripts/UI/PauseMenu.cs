@@ -74,6 +74,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Loading scene " + sceneName + "...");
         SceneManager.LoadScene(sceneName);
+        isPaused = false;
     }
 
     public void QuitApplication()

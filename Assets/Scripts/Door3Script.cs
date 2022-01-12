@@ -23,10 +23,15 @@ public class Door3Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !T3ButtonPuzzleManager.complete)
         {
+<<<<<<< Updated upstream
             SceneManager.LoadScene("Trial3");
+=======
+            SceneManager.LoadScene("Trial3_main");
+>>>>>>> Stashed changes
         }
         if (T3ButtonPuzzleManager.complete) {
             rad.enabled = true;
+            SceneManager.LoadScene("FinalTamjid");
         }
     }
     private void OnTriggerEnter(Collider other)

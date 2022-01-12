@@ -747,8 +747,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a9a522c7040c54a988db24f49ac719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingTile: {fileID: 658241377}
   groundTile: {fileID: 4290542047509882189, guid: 9bf6a5c828ab7be458d173312d713554, type: 3}
   endTile: {fileID: 2401223549151425545, guid: 317f72c0e7e44ba4dacd223ec5029e75, type: 3}
+  nextSpawnPoint: {x: 0, y: 0, z: 0}
   timeOffset: 0.4
 --- !u!4 &435710680
 Transform:
@@ -1513,7 +1515,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804293471}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.16931042, y: -0.000001760896, z: 0.00000038351246, w: 0.9855628}
+=======
+  m_LocalRotation: {x: 0.16931054, y: -0.0000017608959, z: 0.0000003834623, w: 0.98556274}
+>>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1854,7 +1860,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931871916}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.18314143, y: -0.0025423688, z: 0.00047385826, w: 0.9830832}
+=======
+  m_LocalRotation: {x: 0.18313806, y: -0.0019173641, z: 0.00035739358, w: 0.98308533}
+>>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

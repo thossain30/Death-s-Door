@@ -17,12 +17,30 @@ public class ActionSequence : MonoBehaviour
 
     private void OnEnable()
     {
+<<<<<<< Updated upstream
+=======
+        GroundTile.onExitTile += OnExitRunnerTile;
+        spawnTile.enterSpawn += onEnterSpawn;
+        T1artifact.onConclusion += onConclusion;
+        T2artifact.onConclusion += onConclusion;
+        T3artifact.onConclusion += onConclusion;
+        MazeCheckpoint.onCheckpoint += onCheckpoint;
+>>>>>>> Stashed changes
         T3ButtonPuzzleManager.onPuzzleComplete += OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
     }
 
     private void OnDisable()
     {
+<<<<<<< Updated upstream
+=======
+        GroundTile.onExitTile -= OnExitRunnerTile;
+        spawnTile.enterSpawn -= onEnterSpawn;
+        T1artifact.onConclusion -= onConclusion;
+        T2artifact.onConclusion -= onConclusion;
+        T3artifact.onConclusion -= onConclusion;
+        MazeCheckpoint.onCheckpoint -= onCheckpoint;
+>>>>>>> Stashed changes
         T3ButtonPuzzleManager.onPuzzleComplete -= OnPuzzleComplete;
         DialogueManager.onDialogueComplete += OnDialogueComplete;
     }

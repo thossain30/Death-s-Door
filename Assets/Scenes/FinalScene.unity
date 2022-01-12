@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &28696396
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +217,8 @@ Transform:
   m_Father: {fileID: 1253814870}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 87.708, y: 29.073, z: 32.221}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &152858614
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +505,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.999999, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &265746562
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +599,8 @@ Transform:
   m_Father: {fileID: 1253814870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 87.708, y: 29.073, z: 25.769}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &353481922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -874,7 +880,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604244890}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0.22547781, y: 0.0028309857, z: -0.004177171, w: -0.9742353}
+=======
+  m_LocalRotation: {x: -0.22548288, y: 0.0027631917, z: -0.0041614943, w: -0.97423434}
+>>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1178,6 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c712abaf9889351428cfa37789895a4b, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &1064917736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1375,8 @@ Transform:
   m_Father: {fileID: 1253814870}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 87.708, y: 29.073, z: 32.221}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1113899176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1472,7 @@ Transform:
   m_Father: {fileID: 1892555107}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1253814869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,6 +1511,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1254810258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8540060345087680372, guid: 50df63ca5582749439251daf1c5b7310, type: 3}
@@ -1725,6 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
 --- !u!1 &1519118907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1835,8 @@ Transform:
   m_Father: {fileID: 1253814870}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 87.708, y: 29.073, z: 32.221}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1548539547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2032,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1659794571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,6 +2126,8 @@ Transform:
   m_Father: {fileID: 1253814870}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 87.708, y: 29.073, z: 32.221}
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1668490417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2211699637726911504, guid: 6561d51e6e0ebad46806a78790973956, type: 3}
@@ -2145,6 +2167,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1777797034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,6 +2354,8 @@ Transform:
   m_Father: {fileID: 1253814870}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 87.708, y: 29.073, z: 32.221}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1892555106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,7 +2508,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954225772}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0.21046726, y: 0.0009477757, z: -0.0044019697, w: -0.97759056}
+=======
+  m_LocalRotation: {x: -0.21046722, y: 0.00094777666, z: -0.0044019753, w: -0.97759056}
+>>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
