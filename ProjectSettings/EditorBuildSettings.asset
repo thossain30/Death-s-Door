@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Trial3_main.unity
     guid: c6e07f963dcb14e4495e84b49a64bdc5
   - enabled: 1
+    path: Assets/Scenes/FinalTamjid.unity
+    guid: a8b1526c2dd58be47ad64af96ef0fc13
+  - enabled: 1
     path: Assets/Scenes/credits.unity
     guid: dea660f90adac3f4fae5b8e0704f68a1
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: b76b5d2ddf05011448c32188d14b5dac
   m_configObjects: {}

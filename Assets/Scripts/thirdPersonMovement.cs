@@ -5,6 +5,7 @@ using UnityEngine;
 public class thirdPersonMovement : MonoBehaviour
 {
     private spawnTile spawn;
+    private Finalmovement spawn2;
     public CharacterController controller;
     public Transform cam;
 
@@ -21,6 +22,7 @@ public class thirdPersonMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         spawn = GetComponent<spawnTile>();
+        spawn2 = GetComponent<Finalmovement>();
         spawn.onSpawn = true;
     }
 

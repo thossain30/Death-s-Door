@@ -25,10 +25,11 @@ public class Door3Script : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && nextToDoor && !T3ButtonPuzzleManager.complete && mazefloor.complete)
         {
-            SceneManager.LoadScene("WinScreen");
+            SceneManager.LoadScene("Trial3_main");
         }
         if (T3ButtonPuzzleManager.complete) {
             rad.enabled = true;
+            SceneManager.LoadScene("FinalTamjid");
         }
     }
     private void OnTriggerEnter(Collider other)
