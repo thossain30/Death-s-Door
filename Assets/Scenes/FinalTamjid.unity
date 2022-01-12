@@ -554,7 +554,7 @@ Transform:
   m_GameObject: {fileID: 189444554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.28, y: 5.58, z: -4.811}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 136295053}
   m_RootOrder: 1
@@ -815,7 +815,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.8679245, g: 0.24072622, b: 0.24072622, a: 1}
+      maxColor: {r: 0.8962264, g: 0.12259703, b: 0.12259703, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5358,7 +5358,7 @@ Transform:
   m_GameObject: {fileID: 276758987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.28, y: 5.58, z: -4.811}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 136295053}
   m_RootOrder: 5
@@ -5619,7 +5619,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.16862746, g: 0.81960785, b: 0.07450981, a: 1}
+      maxColor: {r: 0.3254902, g: 0.93333334, b: 0.17254902, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -10306,15 +10306,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2211699637726911505, guid: 6561d51e6e0ebad46806a78790973956, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.9622642
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 2211699637726911505, guid: 6561d51e6e0ebad46806a78790973956, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.9622642
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 2211699637726911505, guid: 6561d51e6e0ebad46806a78790973956, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.9622642
+      value: 0.9056604
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2211699637726911506, guid: 6561d51e6e0ebad46806a78790973956, type: 3}
@@ -11052,7 +11052,7 @@ Transform:
   m_GameObject: {fileID: 1046755353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.28, y: 5.58, z: -4.975}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 136295053}
   m_RootOrder: 4
@@ -11313,7 +11313,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.8679245, g: 0.24072622, b: 0.24072622, a: 1}
+      maxColor: {r: 0.8962264, g: 0.16487186, b: 0.16487186, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -16427,7 +16427,7 @@ Transform:
   m_GameObject: {fileID: 1519537742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.28, y: 5.58, z: -4.975}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 136295053}
   m_RootOrder: 3
@@ -21388,7 +21388,7 @@ Transform:
   m_GameObject: {fileID: 1608138580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.28, y: 5.58, z: -4.641}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 136295053}
   m_RootOrder: 6
@@ -26578,7 +26578,7 @@ Transform:
   m_GameObject: {fileID: 1971659802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.28, y: 5.58, z: -4.641}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 136295053}
   m_RootOrder: 2
@@ -26839,7 +26839,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.16914402, g: 0.8207547, b: 0.072783865, a: 1}
+      maxColor: {r: 0.3342521, g: 0.9339623, b: 0.17181383, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
