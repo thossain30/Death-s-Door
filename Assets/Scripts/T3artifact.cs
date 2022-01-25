@@ -11,6 +11,7 @@ public class T3artifact : MonoBehaviour
     void Start()
     {
         text.SetActive(false);
+        player = GameObject.FindObjectOfType<thirdPersonMovement>();
     }
 
     [System.Obsolete]
